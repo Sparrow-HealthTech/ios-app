@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8599A8C2C3AA0EB00C9E017 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8599A8B2C3AA0EB00C9E017 /* HeaderView.swift */; };
+		D8599A902C3AB4C900C9E017 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8599A8F2C3AB4C900C9E017 /* HomeView.swift */; };
+		D8599A922C3AB58B00C9E017 /* ActionPlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8599A912C3AB58B00C9E017 /* ActionPlansView.swift */; };
 		D85E09A62C3A8FCB0075759E /* psychbase_patientappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E09A52C3A8FCB0075759E /* psychbase_patientappApp.swift */; };
 		D85E09A82C3A8FCB0075759E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E09A72C3A8FCB0075759E /* ContentView.swift */; };
 		D85E09AA2C3A8FCD0075759E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D85E09A92C3A8FCD0075759E /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D8599A8B2C3AA0EB00C9E017 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		D8599A8F2C3AB4C900C9E017 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D8599A912C3AB58B00C9E017 /* ActionPlansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPlansView.swift; sourceTree = "<group>"; };
 		D85E09A22C3A8FCB0075759E /* psychbase-patientapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "psychbase-patientapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D85E09A52C3A8FCB0075759E /* psychbase_patientappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = psychbase_patientappApp.swift; sourceTree = "<group>"; };
 		D85E09A72C3A8FCB0075759E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D8599A8E2C3AA15600C9E017 /* home-page */ = {
+			isa = PBXGroup;
+			children = (
+				D8599A8F2C3AB4C900C9E017 /* HomeView.swift */,
+				D8599A912C3AB58B00C9E017 /* ActionPlansView.swift */,
+			);
+			path = "home-page";
+			sourceTree = "<group>";
+		};
 		D85E09992C3A8FCB0075759E = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +109,12 @@
 		D85E09A42C3A8FCB0075759E /* psychbase-patientapp */ = {
 			isa = PBXGroup;
 			children = (
+				D8599A8E2C3AA15600C9E017 /* home-page */,
 				D85E09A52C3A8FCB0075759E /* psychbase_patientappApp.swift */,
 				D85E09A72C3A8FCB0075759E /* ContentView.swift */,
 				D85E09A92C3A8FCD0075759E /* Assets.xcassets */,
 				D85E09AB2C3A8FCD0075759E /* Preview Content */,
+				D8599A8B2C3AA0EB00C9E017 /* HeaderView.swift */,
 			);
 			path = "psychbase-patientapp";
 			sourceTree = "<group>";
@@ -258,7 +275,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D85E09A82C3A8FCB0075759E /* ContentView.swift in Sources */,
+				D8599A922C3AB58B00C9E017 /* ActionPlansView.swift in Sources */,
+				D8599A902C3AB4C900C9E017 /* HomeView.swift in Sources */,
 				D85E09A62C3A8FCB0075759E /* psychbase_patientappApp.swift in Sources */,
+				D8599A8C2C3AA0EB00C9E017 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
