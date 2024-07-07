@@ -11,6 +11,7 @@ struct HomeView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             ActionPlansView()
+            AssessmentsView()
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 0)

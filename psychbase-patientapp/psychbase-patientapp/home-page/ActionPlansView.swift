@@ -54,7 +54,6 @@ struct ActionPlansView: View {
                           )
                           .foregroundColor(.black.opacity(0.8))
                           .frame(maxWidth: .infinity, alignment: .topLeading)
-                          .padding(.bottom, 11)
                     }
                     .padding(8)
                     .frame(maxWidth: .infinity, alignment: .topLeading)
