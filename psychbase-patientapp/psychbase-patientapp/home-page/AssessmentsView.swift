@@ -32,7 +32,7 @@ struct AssessmentsView: View {
                       .foregroundColor(.clear)
                       .frame(width: 338, height: 183)
                       .background(
-                        Image("PATH_TO_IMAGE")
+                        Image("assessments-tile")
                           .resizable()
                           .aspectRatio(contentMode: .fill)
                           .frame(width: 338, height: 183)
