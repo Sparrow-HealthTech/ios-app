@@ -7,10 +7,13 @@
 
 import SwiftUI
 
-struct ActionPlansView: View {
-    func startExercise() {
-        print("Hello from button!")
+struct HomeTileView: View {
+    @Binding var exerciseStarted: Bool
+    
+    func startExercise(){
+        exerciseStarted = true
     }
+    
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
             // Heading
@@ -81,5 +84,5 @@ struct ActionPlansView: View {
 }
 
 #Preview {
-    ActionPlansView()
+    HomeTileView(exerciseStarted: .constant(true))
 }
