@@ -49,22 +49,27 @@ struct HomeView: View {
     )
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            if activityTile.state == .inProgress {
-                ExerciseView()
-            }
-            else {
-                ScrollView(){
-                    VStack(spacing: 20){
-                        HomeTileView(tileData: $activityTile)
-                        HomeTileView(tileData: $assessmentTile)
+        VStack(alignment: .leading, spacing: 0) {
+            Divider()
+            VStack(alignment: .leading, spacing: 16) {
+                if activityTile.state == .inProgress {
+                    ExerciseView()
+                }
+                else {
+                    ScrollView(){
+                        VStack(spacing: 20){
+                            Spacer()
+                            HomeTileView(tileData: $activityTile)
+                            HomeTileView(tileData: $assessmentTile)
+                        }
                     }
                 }
             }
+            .padding(.horizontal, 16)
+            .frame(maxWidth: .infinity, alignment: .topLeading)
         }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 0)
         .frame(maxWidth: .infinity, alignment: .topLeading)
+        .background(Color(red: 0.95, green: 0.95, blue: 0.95))
     }
 }
 

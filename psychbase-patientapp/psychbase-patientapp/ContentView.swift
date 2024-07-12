@@ -12,9 +12,7 @@ struct ContentView: View {
         VStack {
             HeaderView()
             HomeView()
-            Spacer()
         }
-        .padding()
     }
 }
 

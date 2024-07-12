@@ -115,9 +115,9 @@
 				D8599A8E2C3AA15600C9E017 /* home-page */,
 				D85E09A52C3A8FCB0075759E /* psychbase_patientappApp.swift */,
 				D85E09A72C3A8FCB0075759E /* ContentView.swift */,
+				D8599A8B2C3AA0EB00C9E017 /* HeaderView.swift */,
 				D85E09A92C3A8FCD0075759E /* Assets.xcassets */,
 				D85E09AB2C3A8FCD0075759E /* Preview Content */,
-				D8599A8B2C3AA0EB00C9E017 /* HeaderView.swift */,
 			);
 			path = "psychbase-patientapp";
 			sourceTree = "<group>";
