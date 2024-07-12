@@ -93,7 +93,12 @@ struct HomeTileView: View {
         .overlay(
           RoundedRectangle(cornerRadius: 16)
             .inset(by: 0.5)
-            .stroke(Color(red: 0.84, green: 0.13, blue: 0.56), lineWidth: 1)
+            .stroke(
+                LinearGradient(
+                    colors: [.red, .orange, .yellow, .green, .blue, .purple],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing),
+                lineWidth: 1)
         )
     }
 }
