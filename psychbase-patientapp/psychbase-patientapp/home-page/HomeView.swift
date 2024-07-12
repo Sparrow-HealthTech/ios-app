@@ -39,6 +39,14 @@ struct HomeView: View {
         activitySubtitle: "Having an unhelpful thought? Do this 1 min exercise to challenge it and help rewire your brain!",
         buttonLabel: "Start Exercise!"
     )
+    @State var assessmentTile  = HomeTileData(
+        tileHeading: "Assigned Assessment",
+        tileSubtitle: "To see how you’re progressing your psychologist needs you to complete the following assessment.",
+        tilePicture: "assessments-tile",
+        activityHeading: "DASS-10 Questionaire",
+        activitySubtitle: "This 2 min survey measures your depression, anxiety & stress levels.",
+        buttonLabel: "ToDo - This Week"
+    )
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -46,11 +54,20 @@ struct HomeView: View {
                 ExerciseView()
             }
             else {
-                HomeTileView(tileData: $activityTile)
+                ScrollView(){
+                    VStack(spacing: 20){
+                        HomeTileView(tileData: $activityTile)
+                        HomeTileView(tileData: $assessmentTile)
+                    }
+                }
             }
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 0)
         .frame(maxWidth: .infinity, alignment: .topLeading)
     }
+}
+
+#Preview {
+    HomeView()
 }
