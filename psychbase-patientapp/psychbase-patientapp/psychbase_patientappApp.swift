@@ -15,3 +15,9 @@ struct psychbase_patientappApp: App {
         }
     }
 }
+
+struct PsychbasePreview: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
