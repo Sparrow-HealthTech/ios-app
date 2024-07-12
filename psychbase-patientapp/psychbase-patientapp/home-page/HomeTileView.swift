@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct HomeTileView: View {
-    @Binding var exerciseStarted: Bool
+    @Binding var tileData: HomeTileData
     
     func startExercise(){
-        exerciseStarted = true
+        tileData.startModule()
     }
     
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
             // Heading
-                Text("Assigned Action Plan")
+            Text(tileData.tileHeading)
                   .font(
                     Font.custom("Quicksand", size: 20)
                       .weight(.semibold)
@@ -26,7 +26,7 @@ struct HomeTileView: View {
                   .foregroundColor(Color(red: 0.16, green: 0.16, blue: 0.17))
                   .frame(maxWidth: .infinity, alignment: .top)
             // Description
-                Text("Your psychologist has assigned this activity to complete as part of your treatment plan.")
+            Text(tileData.tileSubtitle)
                   .font(
                     Font.custom("Quicksand", size: 12)
                       .weight(.medium)
@@ -39,14 +39,14 @@ struct HomeTileView: View {
                   .foregroundColor(.clear)
                   .frame(width: 338, height: 183)
                   .background(
-                    Image("action-plans")
+                    Image(tileData.tilePicture)
                       .resizable()
                       .aspectRatio(contentMode: .fill)
                       .frame(width: 338, height: 183)
                       .clipped()
                   )
             // Exercise Name
-                Text("Thought Challenging")
+            Text(tileData.activityHeading)
                   .font(
                     Font.custom("Quicksand", size: 18)
                       .weight(.semibold)
@@ -56,7 +56,7 @@ struct HomeTileView: View {
                   .padding(.top, 15)
                   .padding(.leading, 10)
             // Exercise Description
-                Text("Having an unhelpful thought? Do this 1 min exercise to challenge it and help rewire your brain!")
+            Text(tileData.activitySubtitle)
                   .font(
                     Font.custom("Quicksand", size: 12)
                       .weight(.medium)
@@ -67,7 +67,7 @@ struct HomeTileView: View {
             // Button
             HStack(alignment: .center, spacing: 8) {
                 Button(action: startExercise) {
-                    Text("Start Exercise!")
+                    Text(tileData.buttonLabel)
                       .font(
                         Font.custom("Quicksand", size: 14)
                           .weight(.bold)
@@ -96,8 +96,4 @@ struct HomeTileView: View {
             .stroke(Color(red: 0.84, green: 0.13, blue: 0.56), lineWidth: 1)
         )
     }
-}
-
-#Preview {
-    HomeTileView(exerciseStarted: .constant(false))
 }
