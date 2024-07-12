@@ -63,12 +63,27 @@ struct HomeTileView: View {
                   )
                   .foregroundColor(.black.opacity(0.8))
                   .frame(maxWidth: .infinity, minHeight: 30, alignment:  .topLeading)
-                  .padding(.top, 10)
-                  .padding(.leading, 10)
+                  .padding([.top, .leading, .bottom], 10)
             // Button
-            Button(action: startExercise) {
-                Text("Start Exercise")
+            HStack(alignment: .center, spacing: 8) {
+                Button(action: startExercise) {
+                    Text("Start Exercise!")
+                      .font(
+                        Font.custom("Quicksand", size: 14)
+                          .weight(.bold)
+                      )
+                      .foregroundColor(.white)
+                    Image("start-button")
+                        .resizable()
+                        .frame(width: 16, height: 16)
+                }
             }
+            .padding(.leading, 16)
+            .padding(.trailing, 8)
+            .padding(.vertical, 8)
+            .background(Color(red: 0.17, green: 0.63, blue: 0.28))
+
+            .cornerRadius(12)
         }
         .padding(12)
         .frame(maxWidth: .infinity, alignment: .top)
@@ -84,5 +99,5 @@ struct HomeTileView: View {
 }
 
 #Preview {
-    HomeTileView(exerciseStarted: .constant(true))
+    HomeTileView(exerciseStarted: .constant(false))
 }
