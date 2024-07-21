@@ -89,6 +89,14 @@
 			path = assessments;
 			sourceTree = "<group>";
 		};
+		D81F5F162C4D0F820028FDA6 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				D8599A8B2C3AA0EB00C9E017 /* HeaderView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		D8599A8E2C3AA15600C9E017 /* home-page */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,12 +129,12 @@
 		D85E09A42C3A8FCB0075759E /* psychbase-patientapp */ = {
 			isa = PBXGroup;
 			children = (
+				D81F5F162C4D0F820028FDA6 /* components */,
 				D81F5F132C4D0A3F0028FDA6 /* assessments */,
 				D8E65B792C3FB36100942DCE /* action-plans */,
 				D8599A8E2C3AA15600C9E017 /* home-page */,
 				D85E09A52C3A8FCB0075759E /* psychbase_patientappApp.swift */,
 				D85E09A72C3A8FCB0075759E /* ContentView.swift */,
-				D8599A8B2C3AA0EB00C9E017 /* HeaderView.swift */,
 				D85E09A92C3A8FCD0075759E /* Assets.xcassets */,
 				D85E09AB2C3A8FCD0075759E /* Preview Content */,
 			);
