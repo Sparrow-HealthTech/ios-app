@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D81F5F152C4D0A600028FDA6 /* AssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81F5F142C4D0A600028FDA6 /* AssessmentView.swift */; };
 		D8599A8C2C3AA0EB00C9E017 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8599A8B2C3AA0EB00C9E017 /* HeaderView.swift */; };
 		D8599A902C3AB4C900C9E017 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8599A8F2C3AB4C900C9E017 /* HomeView.swift */; };
 		D8599A922C3AB58B00C9E017 /* HomeTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8599A912C3AB58B00C9E017 /* HomeTileView.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D81F5F142C4D0A600028FDA6 /* AssessmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentView.swift; sourceTree = "<group>"; };
 		D8599A8B2C3AA0EB00C9E017 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		D8599A8F2C3AB4C900C9E017 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D8599A912C3AB58B00C9E017 /* HomeTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTileView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D81F5F132C4D0A3F0028FDA6 /* assessments */ = {
+			isa = PBXGroup;
+			children = (
+				D81F5F142C4D0A600028FDA6 /* AssessmentView.swift */,
+			);
+			path = assessments;
+			sourceTree = "<group>";
+		};
 		D8599A8E2C3AA15600C9E017 /* home-page */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		D85E09A42C3A8FCB0075759E /* psychbase-patientapp */ = {
 			isa = PBXGroup;
 			children = (
+				D81F5F132C4D0A3F0028FDA6 /* assessments */,
 				D8E65B792C3FB36100942DCE /* action-plans */,
 				D8599A8E2C3AA15600C9E017 /* home-page */,
 				D85E09A52C3A8FCB0075759E /* psychbase_patientappApp.swift */,
@@ -290,6 +301,7 @@
 				D8599A922C3AB58B00C9E017 /* HomeTileView.swift in Sources */,
 				D8599A902C3AB4C900C9E017 /* HomeView.swift in Sources */,
 				D85E09A62C3A8FCB0075759E /* psychbase_patientappApp.swift in Sources */,
+				D81F5F152C4D0A600028FDA6 /* AssessmentView.swift in Sources */,
 				D8599A8C2C3AA0EB00C9E017 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

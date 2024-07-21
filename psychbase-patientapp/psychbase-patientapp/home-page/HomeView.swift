@@ -52,8 +52,12 @@ struct HomeView: View {
         VStack(alignment: .leading, spacing: 0) {
             Divider()
             VStack(alignment: .leading, spacing: 16) {
-                if activityTile.state == .inProgress {
+                if activityTile.state == .inProgress && assessmentTile.state == .inProgress {
+                    Text("Error: Activity & Assessment modules are both in-progress.")
+                } else if activityTile.state == .inProgress {
                     ExerciseView()
+                } else if assessmentTile.state == .inProgress {
+                    AssessmentView()
                 }
                 else {
                     ScrollView(){
