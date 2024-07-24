@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HeaderView: View {
+struct HomeHeaderView: View {
     var body: some View {
         HStack() {
             Image("psychbase-logo")
@@ -20,5 +20,5 @@ struct HeaderView: View {
 }
 
 #Preview {
-    HeaderView()
+    HomeHeaderView()
 }

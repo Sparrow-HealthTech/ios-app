@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct HomeTileView: View {
-    @Binding var tileData: HomeTileData
+struct ModuleView: View {
+    @Binding var tileData: ModuleData
     
     func startExercise(){
         tileData.startModule()
@@ -46,7 +46,7 @@ struct HomeTileView: View {
                       .clipped()
                   )
             // Exercise Name
-            Text(tileData.activityHeading)
+            Text(tileData.moduleHeading)
                   .font(
                     Font.custom("Quicksand", size: 18)
                       .weight(.semibold)
@@ -56,7 +56,7 @@ struct HomeTileView: View {
                   .padding(.top, 15)
                   .padding(.leading, 10)
             // Exercise Description
-            Text(tileData.activitySubtitle)
+            Text(tileData.moduleSubtitle)
                   .font(
                     Font.custom("Quicksand", size: 12)
                       .weight(.medium)

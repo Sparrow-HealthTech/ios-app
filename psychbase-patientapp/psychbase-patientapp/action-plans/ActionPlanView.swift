@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ExerciseView: View {
+struct ActionPlanView: View {
     var body: some View {
         Text("Hello world from iphone!")
     }
 }
 
 #Preview {
-    ExerciseView()
+    ActionPlanView()
 }
