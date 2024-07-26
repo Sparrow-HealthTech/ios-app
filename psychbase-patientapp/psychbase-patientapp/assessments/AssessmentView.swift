@@ -9,8 +9,13 @@ import SwiftUI
 
 struct AssessmentView: View {
     var body: some View {
-        HomeHeaderView()
-        Spacer()
+        ModuleHeaderView()
+        Divider()
+        VStack(alignment: .leading, spacing: 0) {
+            Spacer()
+        }
+        .frame(maxWidth: .infinity, alignment: .topLeading)
+        .background(Color(red: 0.95, green: 0.95, blue: 0.95))
     }
 }
 
