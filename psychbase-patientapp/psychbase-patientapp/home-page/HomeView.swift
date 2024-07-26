@@ -12,7 +12,13 @@ enum moduleState {
     case inProgress
 }
 
+enum moduleType {
+    case actionPlan
+    case assessment
+}
+
 struct ModuleData {
+    let type: moduleType
     let tileHeading: String
     let tileSubtitle: String
     let tilePicture: String
@@ -31,7 +37,10 @@ struct ModuleData {
 }
 
 struct HomeView: View {
+    @State var path = NavigationPath()
+    
     @State var actionPlanTile  = ModuleData(
+        type: moduleType.actionPlan,
         tileHeading: "Assigned Action Plan",
         tileSubtitle: "Your psychologist has assigned this activity to complete as part of your treatment plan.",
         tilePicture: "action-plans",
@@ -40,6 +49,7 @@ struct HomeView: View {
         buttonLabel: "Start Exercise!"
     )
     @State var assessmentTile  = ModuleData(
+        type: moduleType.assessment,
         tileHeading: "Assigned Assessment",
         tileSubtitle: "To see how you’re progressing your psychologist needs you to complete the following assessment.",
         tilePicture: "assessments-tile",
@@ -49,27 +59,19 @@ struct HomeView: View {
     )
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            VStack(alignment: .leading, spacing: 16) {
-                if actionPlanTile.state == .inProgress && assessmentTile.state == .inProgress {
-                    Text("Error: Activity & Assessment modules are both in-progress.")
-                } else if actionPlanTile.state == .inProgress {
-                    ActionPlanView()
-                } else if assessmentTile.state == .inProgress {
-                    AssessmentView()
-                }
-                else {
+        NavigationStack(path: $path) {
+            VStack(alignment: .leading, spacing: 0) {
+                Divider()
                     ScrollView(){
                         VStack(spacing: 20){
                             Spacer()
-                            ModuleView(tileData: $actionPlanTile)
-                            ModuleView(tileData: $assessmentTile)
+                            ModuleView(path: $path, tileData: $actionPlanTile)
+                            ModuleView(path: $path, tileData: $assessmentTile)
                         }
                     }
                 }
-            }
-            .padding(.horizontal, 16)
-            .frame(maxWidth: .infinity, alignment: .topLeading)
+                .padding(.horizontal, 16)
+                .frame(maxWidth: .infinity, alignment: .topLeading)
         }
         .frame(maxWidth: .infinity, alignment: .topLeading)
         .background(Color(red: 0.95, green: 0.95, blue: 0.95))
