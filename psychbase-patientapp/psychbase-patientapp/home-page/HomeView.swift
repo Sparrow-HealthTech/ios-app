@@ -60,8 +60,9 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack(path: $path) {
-            VStack(alignment: .leading, spacing: 0) {
+            VStack(alignment: .leading, spacing: 0){
                 Divider()
+                VStack(alignment: .leading, spacing: 16) {
                     ScrollView(){
                         VStack(spacing: 20){
                             Spacer()
@@ -72,9 +73,10 @@ struct HomeView: View {
                 }
                 .padding(.horizontal, 16)
                 .frame(maxWidth: .infinity, alignment: .topLeading)
+            }
+            .frame(maxWidth: .infinity, alignment: .topLeading)
+            .background(Color(red: 0.95, green: 0.95, blue: 0.95))
         }
-        .frame(maxWidth: .infinity, alignment: .topLeading)
-        .background(Color(red: 0.95, green: 0.95, blue: 0.95))
     }
 }
 

@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ModuleView: View {
+    @Binding var path: NavigationPath
     @Binding var tileData: ModuleData
     
     func startExercise(){
         tileData.startModule()
+        if tileData.type == .actionPlan {
+        }
     }
     
     var body: some View {
