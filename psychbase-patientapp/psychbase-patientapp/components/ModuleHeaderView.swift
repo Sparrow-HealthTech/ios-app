@@ -23,12 +23,22 @@ struct ModuleHeaderView: View {
             }
             HStack() {
                 Button(action: goBack) {
-                    Image("start-button")
+                    Image("back-button")
                         .resizable()
-                        .frame(width: 16, height: 16)
+                        .frame(width: 24, height: 24)
                 }
-                Spacer()
+                .padding(.leading, 20)
+                Text("DASS-10 Assessment")
+                  .font(
+                    Font.custom("Sans Serif", size: 20)
+                      .weight(.bold)
+                  )
+                  .multilineTextAlignment(.center)
+                  .foregroundColor(Color(red: 0.18, green: 0.16, blue: 0.17))
+                  .frame(maxWidth: .infinity, alignment: .top)
+                  .padding(.trailing, 50)
             }
+            .padding(.top, 10)
         }
     }
 }
