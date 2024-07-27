@@ -8,17 +8,24 @@
 import SwiftUI
 
 struct AssessmentView: View {
+    @Binding var path: [appPages]
+    
     var body: some View {
-        ModuleHeaderView()
-        Divider()
-        VStack(alignment: .leading, spacing: 0) {
-            Spacer()
+        VStack() {
+            ModuleHeaderView(path: $path,
+                             headerTitle: "DASS-10 Assessment")
+            Divider()
+            VStack(alignment: .leading, spacing: 0) {
+                Spacer()
+            }
+            .frame(maxWidth: .infinity, alignment: .topLeading)
+            .background(Color(red: 0.95, green: 0.95, blue: 0.95))
         }
-        .frame(maxWidth: .infinity, alignment: .topLeading)
-        .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+        .navigationBarBackButtonHidden(true)
     }
 }
-
+/*
 #Preview {
     AssessmentView()
 }
+*/

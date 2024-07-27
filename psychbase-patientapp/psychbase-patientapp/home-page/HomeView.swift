@@ -37,7 +37,7 @@ struct ModuleData {
 }
 
 struct HomeView: View {
-    @State var path = NavigationPath()
+    @Binding var path: [appPages]
     
     @State var actionPlanTile  = ModuleData(
         type: moduleType.actionPlan,
@@ -59,27 +59,27 @@ struct HomeView: View {
     )
     
     var body: some View {
-        NavigationStack(path: $path) {
-            VStack(alignment: .leading, spacing: 0){
-                Divider()
-                VStack(alignment: .leading, spacing: 16) {
-                    ScrollView(){
-                        VStack(spacing: 20){
-                            Spacer()
-                            ModuleView(path: $path, tileData: $actionPlanTile)
-                            ModuleView(path: $path, tileData: $assessmentTile)
-                        }
+        VStack(alignment: .leading, spacing: 0){
+            Divider()
+            VStack(alignment: .leading, spacing: 16) {
+                ScrollView(){
+                    VStack(spacing: 20){
+                        Spacer()
+                        ModuleView(path: $path, tileData: $actionPlanTile)
+                        ModuleView(path: $path, tileData: $assessmentTile)
                     }
                 }
-                .padding(.horizontal, 16)
-                .frame(maxWidth: .infinity, alignment: .topLeading)
             }
+            .padding(.horizontal, 16)
             .frame(maxWidth: .infinity, alignment: .topLeading)
-            .background(Color(red: 0.95, green: 0.95, blue: 0.95))
         }
+        .frame(maxWidth: .infinity, alignment: .topLeading)
+        .background(Color(red: 0.95, green: 0.95, blue: 0.95))
     }
 }
 
+/*
 #Preview {
     HomeView()
 }
+*/

@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct ModuleView: View {
-    @Binding var path: NavigationPath
+    @Binding var path: [appPages]
     @Binding var tileData: ModuleData
     
-    func startExercise(){
+    func startModule(){
         tileData.startModule()
         if tileData.type == .actionPlan {
+            path.append(.actionPlan1)
+        }
+        else if tileData.type == .assessment {
+            path.append(.assessment1)
         }
     }
     
@@ -69,7 +73,7 @@ struct ModuleView: View {
                   .padding([.top, .leading, .bottom], 10)
             // Button
             HStack(alignment: .center, spacing: 8) {
-                Button(action: startExercise) {
+                Button(action: startModule) {
                     Text(tileData.buttonLabel)
                       .font(
                         Font.custom("Quicksand", size: 14)

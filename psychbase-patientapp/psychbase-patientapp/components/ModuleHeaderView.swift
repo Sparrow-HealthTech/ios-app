@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ModuleHeaderView: View {
+    @Binding var path: [appPages]
+    var headerTitle: String
+    
     func goBack(){
-        
+        path.removeLast()
     }
     
     var body: some View {
@@ -28,11 +31,11 @@ struct ModuleHeaderView: View {
                         .frame(width: 24, height: 24)
                 }
                 .padding(.leading, 20)
-                Text("DASS-10 Assessment")
-                  .font(
-                    Font.custom("Sans Serif", size: 20)
-                      .weight(.bold)
-                  )
+                Text(headerTitle)
+                    .font(
+                      Font.custom("Quicksand", size: 22)
+                        .weight(.semibold)
+                    )
                   .multilineTextAlignment(.center)
                   .foregroundColor(Color(red: 0.18, green: 0.16, blue: 0.17))
                   .frame(maxWidth: .infinity, alignment: .top)
@@ -43,6 +46,8 @@ struct ModuleHeaderView: View {
     }
 }
 
+/*
 #Preview {
     ModuleHeaderView()
 }
+*/
