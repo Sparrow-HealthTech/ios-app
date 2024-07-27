@@ -24,8 +24,10 @@ struct AssessmentView: View {
         .navigationBarBackButtonHidden(true)
     }
 }
-/*
-#Preview {
-    AssessmentView()
+
+struct AssessmentPreview: PreviewProvider {
+    @State static var path = [appPages.home, appPages.assessment1]
+    static var previews: some View {
+        AssessmentView(path: $path)
+    }
 }
-*/

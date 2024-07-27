@@ -24,3 +24,10 @@ struct ActionPlanView: View{
         .navigationBarBackButtonHidden(true)
     }
 }
+
+struct ActionPlanPreview: PreviewProvider {
+    @State static var path = [appPages.home, appPages.actionPlan1]
+    static var previews: some View {
+        ActionPlanView(path: $path)
+    }
+}
