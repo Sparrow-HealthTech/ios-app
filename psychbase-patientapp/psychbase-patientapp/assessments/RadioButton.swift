@@ -19,7 +19,7 @@ where Tag : Hashable, CircleButton : View, Label : View {
         Button {
             selection = tag
         } label: {
-            HStack {
+            VStack {
                 button(selection == tag)
                 label()
             }
