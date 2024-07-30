@@ -56,6 +56,7 @@ struct DASSQuestion: View {
                     .frame(maxWidth: .infinity, alignment: .topLeading)
             }
             .padding(0)
+            .padding(.bottom, 10)
             .frame(maxWidth: .infinity, alignment: .leading)
             Rectangle()
               .foregroundColor(.clear)

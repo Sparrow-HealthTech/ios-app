@@ -11,7 +11,7 @@ import SwiftUI
 struct Questionnaire: View {
     
     var body: some View {
-        LazyVStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: 10) {
             DASSQuestion(questionNumber: 1, questionText: "I felt I was close to panic", questionImg: "dass-q1")
             DASSQuestion(questionNumber: 2, questionText: "I found it difficult to work up the initiative to do things", questionImg: "dass-q2")
             DASSQuestion(questionNumber: 3, questionText: "I felt down hearted and blue", questionImg: "dass-q3")
