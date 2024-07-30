@@ -18,6 +18,7 @@ struct AssessmentView: View {
                 Divider()
                 VStack(alignment: .leading, spacing: 0) {
                     DoctorView()
+                    QuestionnaireView()
                 }
             }
             .frame(maxWidth: .infinity, alignment: .topLeading)

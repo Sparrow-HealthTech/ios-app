@@ -19,6 +19,9 @@
 		D85E09C12C3A8FCD0075759E /* psychbase_patientappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E09C02C3A8FCD0075759E /* psychbase_patientappUITests.swift */; };
 		D85E09C32C3A8FCD0075759E /* psychbase_patientappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E09C22C3A8FCD0075759E /* psychbase_patientappUITestsLaunchTests.swift */; };
 		D8712BF42C58DFE300DF9116 /* DoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8712BF32C58DFE300DF9116 /* DoctorView.swift */; };
+		D8712BF62C590D2700DF9116 /* QuestionnaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8712BF52C590D2700DF9116 /* QuestionnaireView.swift */; };
+		D8712BF82C59114E00DF9116 /* DASSQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8712BF72C59114E00DF9116 /* DASSQuestionView.swift */; };
+		D8712BFA2C5914F600DF9116 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8712BF92C5914F600DF9116 /* RadioButton.swift */; };
 		D8E65B7B2C3FB37E00942DCE /* ActionPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E65B7A2C3FB37E00942DCE /* ActionPlanView.swift */; };
 		D8F541522C510B79000C3594 /* ModuleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F541512C510B79000C3594 /* ModuleHeaderView.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +59,9 @@
 		D85E09C02C3A8FCD0075759E /* psychbase_patientappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = psychbase_patientappUITests.swift; sourceTree = "<group>"; };
 		D85E09C22C3A8FCD0075759E /* psychbase_patientappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = psychbase_patientappUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D8712BF32C58DFE300DF9116 /* DoctorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorView.swift; sourceTree = "<group>"; };
+		D8712BF52C590D2700DF9116 /* QuestionnaireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireView.swift; sourceTree = "<group>"; };
+		D8712BF72C59114E00DF9116 /* DASSQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DASSQuestionView.swift; sourceTree = "<group>"; };
+		D8712BF92C5914F600DF9116 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		D8E65B7A2C3FB37E00942DCE /* ActionPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPlanView.swift; sourceTree = "<group>"; };
 		D8F541512C510B79000C3594 /* ModuleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				D81F5F142C4D0A600028FDA6 /* AssessmentView.swift */,
+				D8712BF52C590D2700DF9116 /* QuestionnaireView.swift */,
+				D8712BF72C59114E00DF9116 /* DASSQuestionView.swift */,
+				D8712BF92C5914F600DF9116 /* RadioButton.swift */,
 			);
 			path = assessments;
 			sourceTree = "<group>";
@@ -313,9 +322,12 @@
 				D8E65B7B2C3FB37E00942DCE /* ActionPlanView.swift in Sources */,
 				D85E09A82C3A8FCB0075759E /* ContentView.swift in Sources */,
 				D8599A922C3AB58B00C9E017 /* ModuleView.swift in Sources */,
+				D8712BFA2C5914F600DF9116 /* RadioButton.swift in Sources */,
 				D8F541522C510B79000C3594 /* ModuleHeaderView.swift in Sources */,
+				D8712BF62C590D2700DF9116 /* QuestionnaireView.swift in Sources */,
 				D8599A902C3AB4C900C9E017 /* HomeView.swift in Sources */,
 				D85E09A62C3A8FCB0075759E /* psychbase_patientappApp.swift in Sources */,
+				D8712BF82C59114E00DF9116 /* DASSQuestionView.swift in Sources */,
 				D81F5F152C4D0A600028FDA6 /* AssessmentView.swift in Sources */,
 				D8599A8C2C3AA0EB00C9E017 /* HomeHeaderView.swift in Sources */,
 				D8712BF42C58DFE300DF9116 /* DoctorView.swift in Sources */,
