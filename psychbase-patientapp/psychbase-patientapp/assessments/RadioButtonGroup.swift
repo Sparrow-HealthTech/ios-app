@@ -27,15 +27,10 @@ where Tag : Hashable, CircleButton : View, Label : View {
     
     var body: some View {
         ZStack() {
-            Rectangle()
-                .fill(Color(red: 0.17, green: 0.63, blue: 0.28).opacity(0.12))
-                .frame(width: 250, height: 2)
-                .offset(y: -6)
-            HStack(alignment: .top, spacing: 35) {
+            HStack(alignment: .top, spacing: 40) {
                 radioButtons
             }
-            .padding(.leading, 30)
-            .padding(.top, 20)
+            .padding()
         }
     }
 }
