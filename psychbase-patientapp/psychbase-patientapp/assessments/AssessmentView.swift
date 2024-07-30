@@ -11,15 +11,18 @@ struct AssessmentView: View {
     @Binding var path: [appPages]
     
     var body: some View {
-        VStack() {
+        VStack {
             ModuleHeaderView(path: $path,
                              headerTitle: "DASS-10 Assessment")
-            Divider()
-            VStack(alignment: .leading, spacing: 0) {
-                Spacer()
+            VStack(alignment: .leading, spacing: 0){
+                Divider()
+                VStack(alignment: .leading, spacing: 0) {
+                    DoctorView()
+                }
             }
             .frame(maxWidth: .infinity, alignment: .topLeading)
             .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+            Spacer()
         }
         .navigationBarBackButtonHidden(true)
     }
