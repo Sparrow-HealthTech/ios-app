@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-struct AssessmentView: View {
+struct Assessment: View {
     @Binding var path: [appPages]
     
     var body: some View {
         VStack {
-            ModuleHeaderView(path: $path,
+            ModuleHeader(path: $path,
                              headerTitle: "DASS-10 Assessment")
             VStack(alignment: .leading, spacing: 0){
                 Divider()
                 VStack(alignment: .leading, spacing: 0) {
-                    DoctorView()
-                    QuestionnaireView()
+                    Doctor()
+                    Questionnaire()
                 }
             }
             .frame(maxWidth: .infinity, alignment: .topLeading)
@@ -32,6 +32,6 @@ struct AssessmentView: View {
 struct AssessmentPreview: PreviewProvider {
     @State static var path = [appPages.home, appPages.assessment1]
     static var previews: some View {
-        AssessmentView(path: $path)
+        Assessment(path: $path)
     }
 }

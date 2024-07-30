@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DoctorView: View {
+struct Doctor: View {
     var body: some View {
         HStack(alignment: .top, spacing: 0) {
             Image("male-doctor-1")
@@ -36,5 +36,5 @@ struct DoctorView: View {
 }
 
 #Preview {
-    DoctorView()
+    Doctor()
 }

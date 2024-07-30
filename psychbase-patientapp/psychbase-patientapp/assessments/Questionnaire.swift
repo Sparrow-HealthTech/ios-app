@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct QuestionnaireView: View {
+struct Questionnaire: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 32) {
-            DASSQuestionView()
+            DASSQuestion()
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 20)
@@ -28,5 +28,5 @@ struct QuestionnaireView: View {
 }
 
 #Preview {
-    QuestionnaireView()
+    Questionnaire()
 }

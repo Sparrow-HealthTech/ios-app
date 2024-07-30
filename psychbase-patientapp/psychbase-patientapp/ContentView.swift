@@ -19,14 +19,14 @@ struct ContentView: View {
     var body: some View {
         NavigationStack(path: $path) {
             VStack {
-                HomeHeaderView()
-                HomeView(path: $path)
+                HomeHeader()
+                Home(path: $path)
             }
             .navigationDestination(for: appPages.self){ appPage in
                 if appPage == .actionPlan1 {
-                    ActionPlanView(path: $path)
+                    ActionPlan(path: $path)
                 } else if appPage == .assessment1 {
-                    AssessmentView(path: $path)
+                    Assessment(path: $path)
                 }
             }
         }

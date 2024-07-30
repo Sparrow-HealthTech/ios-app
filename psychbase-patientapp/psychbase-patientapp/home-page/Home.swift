@@ -36,7 +36,7 @@ struct ModuleData {
     }
 }
 
-struct HomeView: View {
+struct Home: View {
     @Binding var path: [appPages]
     
     @State var actionPlanTile  = ModuleData(
@@ -65,8 +65,8 @@ struct HomeView: View {
                 ScrollView(){
                     VStack(spacing: 20){
                         Spacer()
-                        ModuleView(path: $path, tileData: $actionPlanTile)
-                        ModuleView(path: $path, tileData: $assessmentTile)
+                        Module(path: $path, tileData: $actionPlanTile)
+                        Module(path: $path, tileData: $assessmentTile)
                     }
                 }
             }

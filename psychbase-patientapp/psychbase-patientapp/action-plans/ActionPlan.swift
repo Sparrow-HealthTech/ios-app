@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ActionPlanView: View{
+struct ActionPlan: View{
     @Binding var path: [appPages]
     
     var body: some View {
         VStack() {
-            ModuleHeaderView(path: $path,
+            ModuleHeader(path: $path,
                              headerTitle: "Thought Challenging")
             Divider()
             VStack(alignment: .leading, spacing: 0) {
@@ -28,6 +28,6 @@ struct ActionPlanView: View{
 struct ActionPlanPreview: PreviewProvider {
     @State static var path = [appPages.home, appPages.actionPlan1]
     static var previews: some View {
-        ActionPlanView(path: $path)
+        ActionPlan(path: $path)
     }
 }

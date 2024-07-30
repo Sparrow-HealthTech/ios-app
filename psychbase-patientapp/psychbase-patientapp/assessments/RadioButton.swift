@@ -7,12 +7,23 @@
 
 import SwiftUI
 
-struct RadioButton: View {
+struct RadioButton<Tag, CircleButton, Label>: View
+where Tag : Hashable, CircleButton : View, Label : View {
+    
+    let tag: Tag
+    @Binding var selection: Tag?
+    @ViewBuilder let button: (Bool) -> CircleButton
+    @ViewBuilder let label: () -> Label
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            selection = tag
+        } label: {
+            HStack {
+                button(selection == tag)
+                label()
+            }
+        }
+        .buttonStyle(.plain)
     }
-}
-
-#Preview {
-    RadioButton()
 }

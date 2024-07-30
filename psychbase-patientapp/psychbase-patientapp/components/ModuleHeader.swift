@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ModuleHeaderView: View {
+struct ModuleHeader: View {
     @Binding var path: [appPages]
     var headerTitle: String
     

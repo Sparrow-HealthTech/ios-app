@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DASSQuestionView: View {
+struct DASSQuestion: View {
     var questionNumber: Int = 1
     var questionText: String = "I felt I was close to panic"
     var questionImg: String = "dass-q1"
@@ -54,5 +54,5 @@ struct DASSQuestionView: View {
 }
 
 #Preview {
-    DASSQuestionView()
+    DASSQuestion()
 }

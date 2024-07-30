@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ModuleView: View {
+struct Module: View {
     @Binding var path: [appPages]
     @Binding var tileData: ModuleData
     
