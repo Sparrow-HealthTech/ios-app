@@ -10,16 +10,23 @@ import SwiftUI
 struct ActionPlan: View{
     @Binding var path: [appPages]
     
+    let doctorImgPath = "male-doctor-1"
+    let doctorSpeechText = "This exercise starts with identifying the cause & impact of your unhelpful thought.\n\nSometimes just noting down these thoughts can soften their effect on you!"
+    
     var body: some View {
-        VStack() {
+        VStack {
             ModuleHeader(path: $path,
-                             headerTitle: "Thought Challenging")
-            Divider()
-            VStack(alignment: .leading, spacing: 0) {
-                Spacer()
+                         headerTitle: "DASS-10 Assessment")
+            ScrollView {
+                VStack(alignment: .leading, spacing: 0){
+                    Divider()
+                    VStack(alignment: .leading, spacing: 0) {
+                        Doctor(imgPath: doctorImgPath, speechText: doctorSpeechText)
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .topLeading)
+                .background(Color(red: 0.95, green: 0.95, blue: 0.95))
             }
-            .frame(maxWidth: .infinity, alignment: .topLeading)
-            .background(Color(red: 0.95, green: 0.95, blue: 0.95))
         }
         .navigationBarBackButtonHidden(true)
     }
