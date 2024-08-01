@@ -25,9 +25,9 @@ enum Option: CaseIterable, CustomStringConvertible {
 }
 
 struct DASSQuestion: View {
-    var questionNumber: Int = 1
-    var questionText: String = "I felt I was close to panic"
-    var questionImg: String = "dass-q1"
+    var questionNumber: Int
+    var questionText: String
+    var questionImg: String
     @State private var selection: Option?
     
     var body: some View {
