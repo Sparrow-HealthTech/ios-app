@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D80A8ECB2C5B9B4D00260B6C /* ThoughtChallengingExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A8ECA2C5B9B4D00260B6C /* ThoughtChallengingExercise.swift */; };
 		D81F5F152C4D0A600028FDA6 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81F5F142C4D0A600028FDA6 /* Assessment.swift */; };
 		D8599A8C2C3AA0EB00C9E017 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8599A8B2C3AA0EB00C9E017 /* HomeHeader.swift */; };
 		D8599A902C3AB4C900C9E017 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8599A8F2C3AB4C900C9E017 /* Home.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D80A8ECA2C5B9B4D00260B6C /* ThoughtChallengingExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtChallengingExercise.swift; sourceTree = "<group>"; };
 		D81F5F142C4D0A600028FDA6 /* Assessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assessment.swift; sourceTree = "<group>"; };
 		D8599A8B2C3AA0EB00C9E017 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
 		D8599A8F2C3AB4C900C9E017 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				D8E65B7A2C3FB37E00942DCE /* ActionPlan.swift */,
+				D80A8ECA2C5B9B4D00260B6C /* ThoughtChallengingExercise.swift */,
 			);
 			path = "action-plans";
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			files = (
 				D8E65B7B2C3FB37E00942DCE /* ActionPlan.swift in Sources */,
 				D85E09A82C3A8FCB0075759E /* ContentView.swift in Sources */,
+				D80A8ECB2C5B9B4D00260B6C /* ThoughtChallengingExercise.swift in Sources */,
 				D8599A922C3AB58B00C9E017 /* Module.swift in Sources */,
 				D8712BFA2C5914F600DF9116 /* RadioButton.swift in Sources */,
 				D8F541522C510B79000C3594 /* ModuleHeader.swift in Sources */,

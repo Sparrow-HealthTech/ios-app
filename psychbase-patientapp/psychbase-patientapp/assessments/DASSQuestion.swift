@@ -93,7 +93,3 @@ struct DASSQuestion: View {
         }
     }
 }
-
-#Preview {
-    DASSQuestion()
-}
