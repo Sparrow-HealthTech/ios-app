@@ -10,6 +10,9 @@ import SwiftUI
 struct Assessment: View {
     @Binding var path: [appPages]
     
+    let doctorSpeechText = "This assessment gives your psychologist valuable information to guide your therapy.\n\nIt shouldn’t take more than 2 mins to complete. \n\nDon’t overthink your answers. Trust your intuition!"
+    let doctorImgPath = "male-doctor-1"
+    
     func completeAssessment() {
         path.removeLast()
     }
@@ -22,7 +25,7 @@ struct Assessment: View {
                 VStack(alignment: .leading, spacing: 0){
                     Divider()
                     VStack(alignment: .leading, spacing: 0) {
-                        Doctor()
+                        Doctor(imgPath: doctorImgPath, speechText: doctorSpeechText)
                         Questionnaire()
                     }
                 }

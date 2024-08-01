@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct Doctor: View {
+    var imgPath: String
+    var speechText: String
+    
     var body: some View {
         HStack(alignment: .top, spacing: 0) {
-            Image("male-doctor-1")
+            Image(imgPath)
                 .resizable()
                 .frame(width: 150, height: 250)
             Image("chat-bubble-polygon")
@@ -18,7 +21,7 @@ struct Doctor: View {
                 .frame(width: 20, height: 16)
                 .padding(.top, 20)
             HStack(alignment: .center, spacing: 10) {
-                Text("This assessment gives your psychologist valuable information to guide your therapy.\n\nIt shouldn’t take more than 2 mins to complete. \n\nDon’t overthink your answers. Trust your intuition!")
+                Text(speechText)
                     .font(
                         Font.custom("Quicksand", size: 14)
                             .weight(.medium))
@@ -33,8 +36,4 @@ struct Doctor: View {
         .padding(.bottom, 0)
         .frame(maxWidth: .infinity, alignment: .topLeading)
     }
-}
-
-#Preview {
-    Doctor()
 }
