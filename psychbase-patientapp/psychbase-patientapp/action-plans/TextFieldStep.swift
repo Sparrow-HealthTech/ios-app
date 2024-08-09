@@ -1,5 +1,5 @@
 //
-//  SliderStep.swift
+//  TextFieldStep.swift
 //  psychbase-patientapp
 //
 //  Created by Linton Charles on 9/8/2024.
@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-struct SliderStep: View {
-    let stepNumber: Int = 2
-    let stepText: String = "How are you feeling right now?"
-    
-    @State var moodRating: Float
+struct TextFieldStep: View {
+    var stepNumber: Int
+    var stepText: String
+    var sampleAnswer: String
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -42,16 +41,16 @@ struct SliderStep: View {
             .padding(.bottom, 10)
             .frame(maxWidth: .infinity, alignment: .leading)
             
-            Slider(
-                value: $moodRating,
-                in: 0...100
-            ) {
-                Text("Speed")
-            } minimumValueLabel: {
-                Text("Very Bad")
-            } maximumValueLabel: {
-                Text("Very Good")
+            VStack(alignment: .center, spacing: 10) {
+                Text(sampleAnswer)
+                  .font(Font.custom("Quicksand", size: 16))
+                  .foregroundColor(Color(red: 0.7, green: 0.7, blue: 0.7))
+                  .frame(maxWidth: .infinity, alignment: .topLeading)
             }
+            .padding(20)
+            .frame(maxWidth: .infinity, alignment: .center)
+            .background(Color(red: 0.96, green: 0.96, blue: 0.96))
+            .cornerRadius(10)
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 20)
