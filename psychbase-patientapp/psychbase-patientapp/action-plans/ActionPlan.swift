@@ -23,6 +23,7 @@ struct ActionPlan: View{
                     VStack(alignment: .leading, spacing: 0) {
                         Doctor(imgPath: doctorImgPath, speechText: doctorSpeechText)
                         SituationStep()
+                        SliderStep(moodRating: 50)
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .topLeading)
