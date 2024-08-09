@@ -7,9 +7,23 @@
 
 import SwiftUI
 
-struct ThoughtChallengingExercise: View {
-    var stepNumber: Int = 1
-    var stepText: String = "What situation is this unhelpful thought related to?"
+struct Situation: Identifiable {
+    let title: String
+    let imgPath: String
+    var id: String { title }
+}
+
+
+struct SituationStep: View {
+    let stepNumber: Int = 1
+    let stepText: String = "What situation is this unhelpful thought related to?"
+    let situations: [Situation] = [
+        Situation(title: "Work", imgPath: "work-situation"),
+        Situation(title: "Study", imgPath: "study-situation"),
+        Situation(title: "Family", imgPath: "family-situation"),
+        Situation(title: "Friends", imgPath: "friends-situation"),
+        Situation(title: "Other", imgPath: "other-situation"),
+    ]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -39,6 +53,15 @@ struct ThoughtChallengingExercise: View {
             .padding(0)
             .padding(.bottom, 10)
             .frame(maxWidth: .infinity, alignment: .leading)
+            
+            HStack(alignment: .top, spacing: 8) {
+                ForEach(situations) { situation in
+                    SituationOption(imgPath: situation.imgPath,
+                                    situation: situation.title)
+                }
+            }
+            .padding(0)
+            .frame(maxWidth: .infinity, alignment: .topLeading)
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 20)
@@ -53,8 +76,4 @@ struct ThoughtChallengingExercise: View {
             )
         )
     }
-}
-
-#Preview {
-    ThoughtChallengingExercise()
 }

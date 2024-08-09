@@ -22,7 +22,7 @@ struct ActionPlan: View{
                     Divider()
                     VStack(alignment: .leading, spacing: 0) {
                         Doctor(imgPath: doctorImgPath, speechText: doctorSpeechText)
-                        ThoughtChallengingExercise()
+                        SituationStep()
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .topLeading)

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D80A8ECB2C5B9B4D00260B6C /* ThoughtChallengingExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A8ECA2C5B9B4D00260B6C /* ThoughtChallengingExercise.swift */; };
+		D80A8ECB2C5B9B4D00260B6C /* SituationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A8ECA2C5B9B4D00260B6C /* SituationStep.swift */; };
+		D80A8ECD2C5BA48700260B6C /* SituationOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A8ECC2C5BA48700260B6C /* SituationOption.swift */; };
 		D81F5F152C4D0A600028FDA6 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81F5F142C4D0A600028FDA6 /* Assessment.swift */; };
 		D8599A8C2C3AA0EB00C9E017 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8599A8B2C3AA0EB00C9E017 /* HomeHeader.swift */; };
 		D8599A902C3AB4C900C9E017 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8599A8F2C3AB4C900C9E017 /* Home.swift */; };
@@ -24,6 +25,40 @@
 		D8712BF82C59114E00DF9116 /* DASSQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8712BF72C59114E00DF9116 /* DASSQuestion.swift */; };
 		D8712BFA2C5914F600DF9116 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8712BF92C5914F600DF9116 /* RadioButton.swift */; };
 		D8712BFC2C59166B00DF9116 /* RadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8712BFB2C59166B00DF9116 /* RadioButtonGroup.swift */; };
+		D8A62CEE2C65C90D0093A158 /* ActionPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CC12C65C90D0093A158 /* ActionPlan.swift */; };
+		D8A62CEF2C65C90D0093A158 /* SituationOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CC22C65C90D0093A158 /* SituationOption.swift */; };
+		D8A62CF02C65C90D0093A158 /* SituationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CC32C65C90D0093A158 /* SituationStep.swift */; };
+		D8A62CF12C65C90D0093A158 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CC52C65C90D0093A158 /* Assessment.swift */; };
+		D8A62CF22C65C90D0093A158 /* DASSQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CC62C65C90D0093A158 /* DASSQuestion.swift */; };
+		D8A62CF32C65C90D0093A158 /* Questionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CC72C65C90D0093A158 /* Questionnaire.swift */; };
+		D8A62CF42C65C90D0093A158 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CC82C65C90D0093A158 /* RadioButton.swift */; };
+		D8A62CF52C65C90D0093A158 /* RadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CC92C65C90D0093A158 /* RadioButtonGroup.swift */; };
+		D8A62CF62C65C90D0093A158 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CCB2C65C90D0093A158 /* Doctor.swift */; };
+		D8A62CF72C65C90D0093A158 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CCC2C65C90D0093A158 /* HomeHeader.swift */; };
+		D8A62CF82C65C90D0093A158 /* ModuleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CCD2C65C90D0093A158 /* ModuleHeader.swift */; };
+		D8A62CF92C65C90D0093A158 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CCF2C65C90D0093A158 /* Home.swift */; };
+		D8A62CFA2C65C90D0093A158 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CD02C65C90D0093A158 /* Module.swift */; };
+		D8A62CFB2C65C90D0093A158 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A62CD22C65C90D0093A158 /* Preview Assets.xcassets */; };
+		D8A62CFC2C65C90D0093A158 /* CustomView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CD42C65C90D0093A158 /* CustomView2.swift */; };
+		D8A62CFD2C65C90D0093A158 /* CustomView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CD52C65C90D0093A158 /* CustomView3.swift */; };
+		D8A62CFE2C65C90D0093A158 /* CustomView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CD62C65C90D0093A158 /* CustomView4.swift */; };
+		D8A62CFF2C65C90D0093A158 /* CustomView5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CD72C65C90D0093A158 /* CustomView5.swift */; };
+		D8A62D002C65C90D0093A158 /* CustomView7.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CD92C65C90D0093A158 /* CustomView7.swift */; };
+		D8A62D012C65C90D0093A158 /* CustomView8.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CDA2C65C90D0093A158 /* CustomView8.swift */; };
+		D8A62D022C65C90D0093A158 /* CustomView9.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CDB2C65C90D0093A158 /* CustomView9.swift */; };
+		D8A62D032C65C90D0093A158 /* CustomView10.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CDC2C65C90D0093A158 /* CustomView10.swift */; };
+		D8A62D042C65C90D0093A158 /* CustomView11.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CDD2C65C90D0093A158 /* CustomView11.swift */; };
+		D8A62D052C65C90D0093A158 /* CustomView12.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CDF2C65C90D0093A158 /* CustomView12.swift */; };
+		D8A62D062C65C90D0093A158 /* CustomView13.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CE02C65C90D0093A158 /* CustomView13.swift */; };
+		D8A62D072C65C90D0093A158 /* CustomView14.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CE12C65C90D0093A158 /* CustomView14.swift */; };
+		D8A62D082C65C90D0093A158 /* CustomView15.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CE22C65C90D0093A158 /* CustomView15.swift */; };
+		D8A62D092C65C90D0093A158 /* CustomView16.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CE32C65C90D0093A158 /* CustomView16.swift */; };
+		D8A62D0A2C65C90D0093A158 /* CustomView6.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CE52C65C90D0093A158 /* CustomView6.swift */; };
+		D8A62D0B2C65C90D0093A158 /* CodiaWebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CE72C65C90D0093A158 /* CodiaWebImageView.swift */; };
+		D8A62D0C2C65C90D0093A158 /* CustomView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CE82C65C90D0093A158 /* CustomView1.swift */; };
+		D8A62D0D2C65C90D0093A158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A62CEA2C65C90D0093A158 /* Assets.xcassets */; };
+		D8A62D0E2C65C90D0093A158 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CEB2C65C90D0093A158 /* ContentView.swift */; };
+		D8A62D0F2C65C90D0093A158 /* psychbase_patientappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CEC2C65C90D0093A158 /* psychbase_patientappApp.swift */; };
 		D8E65B7B2C3FB37E00942DCE /* ActionPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E65B7A2C3FB37E00942DCE /* ActionPlan.swift */; };
 		D8F541522C510B79000C3594 /* ModuleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F541512C510B79000C3594 /* ModuleHeader.swift */; };
 /* End PBXBuildFile section */
@@ -46,7 +81,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D80A8ECA2C5B9B4D00260B6C /* ThoughtChallengingExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtChallengingExercise.swift; sourceTree = "<group>"; };
+		D80A8ECA2C5B9B4D00260B6C /* SituationStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationStep.swift; sourceTree = "<group>"; };
+		D80A8ECC2C5BA48700260B6C /* SituationOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationOption.swift; sourceTree = "<group>"; };
 		D81F5F142C4D0A600028FDA6 /* Assessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assessment.swift; sourceTree = "<group>"; };
 		D8599A8B2C3AA0EB00C9E017 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
 		D8599A8F2C3AB4C900C9E017 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -66,6 +102,40 @@
 		D8712BF72C59114E00DF9116 /* DASSQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DASSQuestion.swift; sourceTree = "<group>"; };
 		D8712BF92C5914F600DF9116 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		D8712BFB2C59166B00DF9116 /* RadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroup.swift; sourceTree = "<group>"; };
+		D8A62CC12C65C90D0093A158 /* ActionPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPlan.swift; sourceTree = "<group>"; };
+		D8A62CC22C65C90D0093A158 /* SituationOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SituationOption.swift; sourceTree = "<group>"; };
+		D8A62CC32C65C90D0093A158 /* SituationStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SituationStep.swift; sourceTree = "<group>"; };
+		D8A62CC52C65C90D0093A158 /* Assessment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assessment.swift; sourceTree = "<group>"; };
+		D8A62CC62C65C90D0093A158 /* DASSQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DASSQuestion.swift; sourceTree = "<group>"; };
+		D8A62CC72C65C90D0093A158 /* Questionnaire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questionnaire.swift; sourceTree = "<group>"; };
+		D8A62CC82C65C90D0093A158 /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		D8A62CC92C65C90D0093A158 /* RadioButtonGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonGroup.swift; sourceTree = "<group>"; };
+		D8A62CCB2C65C90D0093A158 /* Doctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
+		D8A62CCC2C65C90D0093A158 /* HomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
+		D8A62CCD2C65C90D0093A158 /* ModuleHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleHeader.swift; sourceTree = "<group>"; };
+		D8A62CCF2C65C90D0093A158 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		D8A62CD02C65C90D0093A158 /* Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		D8A62CD22C65C90D0093A158 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D8A62CD42C65C90D0093A158 /* CustomView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView2.swift; sourceTree = "<group>"; };
+		D8A62CD52C65C90D0093A158 /* CustomView3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView3.swift; sourceTree = "<group>"; };
+		D8A62CD62C65C90D0093A158 /* CustomView4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView4.swift; sourceTree = "<group>"; };
+		D8A62CD72C65C90D0093A158 /* CustomView5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView5.swift; sourceTree = "<group>"; };
+		D8A62CD92C65C90D0093A158 /* CustomView7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView7.swift; sourceTree = "<group>"; };
+		D8A62CDA2C65C90D0093A158 /* CustomView8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView8.swift; sourceTree = "<group>"; };
+		D8A62CDB2C65C90D0093A158 /* CustomView9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView9.swift; sourceTree = "<group>"; };
+		D8A62CDC2C65C90D0093A158 /* CustomView10.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView10.swift; sourceTree = "<group>"; };
+		D8A62CDD2C65C90D0093A158 /* CustomView11.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView11.swift; sourceTree = "<group>"; };
+		D8A62CDF2C65C90D0093A158 /* CustomView12.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView12.swift; sourceTree = "<group>"; };
+		D8A62CE02C65C90D0093A158 /* CustomView13.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView13.swift; sourceTree = "<group>"; };
+		D8A62CE12C65C90D0093A158 /* CustomView14.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView14.swift; sourceTree = "<group>"; };
+		D8A62CE22C65C90D0093A158 /* CustomView15.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView15.swift; sourceTree = "<group>"; };
+		D8A62CE32C65C90D0093A158 /* CustomView16.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView16.swift; sourceTree = "<group>"; };
+		D8A62CE52C65C90D0093A158 /* CustomView6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView6.swift; sourceTree = "<group>"; };
+		D8A62CE72C65C90D0093A158 /* CodiaWebImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodiaWebImageView.swift; sourceTree = "<group>"; };
+		D8A62CE82C65C90D0093A158 /* CustomView1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView1.swift; sourceTree = "<group>"; };
+		D8A62CEA2C65C90D0093A158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8A62CEB2C65C90D0093A158 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D8A62CEC2C65C90D0093A158 /* psychbase_patientappApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = psychbase_patientappApp.swift; sourceTree = "<group>"; };
 		D8E65B7A2C3FB37E00942DCE /* ActionPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPlan.swift; sourceTree = "<group>"; };
 		D8F541512C510B79000C3594 /* ModuleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +226,7 @@
 				D85E09A52C3A8FCB0075759E /* psychbase_patientappApp.swift */,
 				D85E09A72C3A8FCB0075759E /* ContentView.swift */,
 				D85E09A92C3A8FCD0075759E /* Assets.xcassets */,
+				D8A62CED2C65C90D0093A158 /* psychbase-patientapp */,
 				D85E09AB2C3A8FCD0075759E /* Preview Content */,
 			);
 			path = "psychbase-patientapp";
@@ -186,11 +257,133 @@
 			path = "psychbase-patientappUITests";
 			sourceTree = "<group>";
 		};
+		D8A62CC42C65C90D0093A158 /* action-plans */ = {
+			isa = PBXGroup;
+			children = (
+				D8A62CC12C65C90D0093A158 /* ActionPlan.swift */,
+				D8A62CC22C65C90D0093A158 /* SituationOption.swift */,
+				D8A62CC32C65C90D0093A158 /* SituationStep.swift */,
+			);
+			path = "action-plans";
+			sourceTree = "<group>";
+		};
+		D8A62CCA2C65C90D0093A158 /* assessments */ = {
+			isa = PBXGroup;
+			children = (
+				D8A62CC52C65C90D0093A158 /* Assessment.swift */,
+				D8A62CC62C65C90D0093A158 /* DASSQuestion.swift */,
+				D8A62CC72C65C90D0093A158 /* Questionnaire.swift */,
+				D8A62CC82C65C90D0093A158 /* RadioButton.swift */,
+				D8A62CC92C65C90D0093A158 /* RadioButtonGroup.swift */,
+			);
+			path = assessments;
+			sourceTree = "<group>";
+		};
+		D8A62CCE2C65C90D0093A158 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				D8A62CCB2C65C90D0093A158 /* Doctor.swift */,
+				D8A62CCC2C65C90D0093A158 /* HomeHeader.swift */,
+				D8A62CCD2C65C90D0093A158 /* ModuleHeader.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		D8A62CD12C65C90D0093A158 /* home-page */ = {
+			isa = PBXGroup;
+			children = (
+				D8A62CCF2C65C90D0093A158 /* Home.swift */,
+				D8A62CD02C65C90D0093A158 /* Module.swift */,
+			);
+			path = "home-page";
+			sourceTree = "<group>";
+		};
+		D8A62CD32C65C90D0093A158 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D8A62CD22C65C90D0093A158 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D8A62CD82C65C90D0093A158 /* customView2 */ = {
+			isa = PBXGroup;
+			children = (
+				D8A62CD42C65C90D0093A158 /* CustomView2.swift */,
+				D8A62CD52C65C90D0093A158 /* CustomView3.swift */,
+				D8A62CD62C65C90D0093A158 /* CustomView4.swift */,
+				D8A62CD72C65C90D0093A158 /* CustomView5.swift */,
+			);
+			path = customView2;
+			sourceTree = "<group>";
+		};
+		D8A62CDE2C65C90D0093A158 /* customView7 */ = {
+			isa = PBXGroup;
+			children = (
+				D8A62CD92C65C90D0093A158 /* CustomView7.swift */,
+				D8A62CDA2C65C90D0093A158 /* CustomView8.swift */,
+				D8A62CDB2C65C90D0093A158 /* CustomView9.swift */,
+				D8A62CDC2C65C90D0093A158 /* CustomView10.swift */,
+				D8A62CDD2C65C90D0093A158 /* CustomView11.swift */,
+			);
+			path = customView7;
+			sourceTree = "<group>";
+		};
+		D8A62CE42C65C90D0093A158 /* customView12 */ = {
+			isa = PBXGroup;
+			children = (
+				D8A62CDF2C65C90D0093A158 /* CustomView12.swift */,
+				D8A62CE02C65C90D0093A158 /* CustomView13.swift */,
+				D8A62CE12C65C90D0093A158 /* CustomView14.swift */,
+				D8A62CE22C65C90D0093A158 /* CustomView15.swift */,
+				D8A62CE32C65C90D0093A158 /* CustomView16.swift */,
+			);
+			path = customView12;
+			sourceTree = "<group>";
+		};
+		D8A62CE62C65C90D0093A158 /* customView6 */ = {
+			isa = PBXGroup;
+			children = (
+				D8A62CDE2C65C90D0093A158 /* customView7 */,
+				D8A62CE42C65C90D0093A158 /* customView12 */,
+				D8A62CE52C65C90D0093A158 /* CustomView6.swift */,
+			);
+			path = customView6;
+			sourceTree = "<group>";
+		};
+		D8A62CE92C65C90D0093A158 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D8A62CD82C65C90D0093A158 /* customView2 */,
+				D8A62CE62C65C90D0093A158 /* customView6 */,
+				D8A62CE72C65C90D0093A158 /* CodiaWebImageView.swift */,
+				D8A62CE82C65C90D0093A158 /* CustomView1.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		D8A62CED2C65C90D0093A158 /* psychbase-patientapp */ = {
+			isa = PBXGroup;
+			children = (
+				D8A62CC42C65C90D0093A158 /* action-plans */,
+				D8A62CCA2C65C90D0093A158 /* assessments */,
+				D8A62CCE2C65C90D0093A158 /* components */,
+				D8A62CD12C65C90D0093A158 /* home-page */,
+				D8A62CD32C65C90D0093A158 /* Preview Content */,
+				D8A62CE92C65C90D0093A158 /* src */,
+				D8A62CEA2C65C90D0093A158 /* Assets.xcassets */,
+				D8A62CEB2C65C90D0093A158 /* ContentView.swift */,
+				D8A62CEC2C65C90D0093A158 /* psychbase_patientappApp.swift */,
+			);
+			name = "psychbase-patientapp";
+			sourceTree = "<group>";
+		};
 		D8E65B792C3FB36100942DCE /* action-plans */ = {
 			isa = PBXGroup;
 			children = (
 				D8E65B7A2C3FB37E00942DCE /* ActionPlan.swift */,
-				D80A8ECA2C5B9B4D00260B6C /* ThoughtChallengingExercise.swift */,
+				D80A8ECA2C5B9B4D00260B6C /* SituationStep.swift */,
+				D80A8ECC2C5BA48700260B6C /* SituationOption.swift */,
 			);
 			path = "action-plans";
 			sourceTree = "<group>";
@@ -300,6 +493,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D85E09AD2C3A8FCD0075759E /* Preview Assets.xcassets in Resources */,
+				D8A62CFB2C65C90D0093A158 /* Preview Assets.xcassets in Resources */,
+				D8A62D0D2C65C90D0093A158 /* Assets.xcassets in Resources */,
 				D85E09AA2C3A8FCD0075759E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,18 +522,51 @@
 			files = (
 				D8E65B7B2C3FB37E00942DCE /* ActionPlan.swift in Sources */,
 				D85E09A82C3A8FCB0075759E /* ContentView.swift in Sources */,
-				D80A8ECB2C5B9B4D00260B6C /* ThoughtChallengingExercise.swift in Sources */,
+				D8A62CF62C65C90D0093A158 /* Doctor.swift in Sources */,
+				D8A62CF02C65C90D0093A158 /* SituationStep.swift in Sources */,
+				D80A8ECB2C5B9B4D00260B6C /* SituationStep.swift in Sources */,
 				D8599A922C3AB58B00C9E017 /* Module.swift in Sources */,
+				D8A62CF82C65C90D0093A158 /* ModuleHeader.swift in Sources */,
+				D8A62CEE2C65C90D0093A158 /* ActionPlan.swift in Sources */,
+				D80A8ECD2C5BA48700260B6C /* SituationOption.swift in Sources */,
+				D8A62D042C65C90D0093A158 /* CustomView11.swift in Sources */,
+				D8A62D022C65C90D0093A158 /* CustomView9.swift in Sources */,
 				D8712BFA2C5914F600DF9116 /* RadioButton.swift in Sources */,
+				D8A62CF72C65C90D0093A158 /* HomeHeader.swift in Sources */,
+				D8A62D0A2C65C90D0093A158 /* CustomView6.swift in Sources */,
+				D8A62D0C2C65C90D0093A158 /* CustomView1.swift in Sources */,
 				D8F541522C510B79000C3594 /* ModuleHeader.swift in Sources */,
+				D8A62CEF2C65C90D0093A158 /* SituationOption.swift in Sources */,
+				D8A62D082C65C90D0093A158 /* CustomView15.swift in Sources */,
 				D8712BF62C590D2700DF9116 /* Questionnaire.swift in Sources */,
+				D8A62D072C65C90D0093A158 /* CustomView14.swift in Sources */,
+				D8A62CF42C65C90D0093A158 /* RadioButton.swift in Sources */,
 				D8599A902C3AB4C900C9E017 /* Home.swift in Sources */,
+				D8A62CF52C65C90D0093A158 /* RadioButtonGroup.swift in Sources */,
 				D8712BFC2C59166B00DF9116 /* RadioButtonGroup.swift in Sources */,
 				D85E09A62C3A8FCB0075759E /* psychbase_patientappApp.swift in Sources */,
+				D8A62D032C65C90D0093A158 /* CustomView10.swift in Sources */,
+				D8A62CF12C65C90D0093A158 /* Assessment.swift in Sources */,
+				D8A62D062C65C90D0093A158 /* CustomView13.swift in Sources */,
 				D8712BF82C59114E00DF9116 /* DASSQuestion.swift in Sources */,
+				D8A62CF22C65C90D0093A158 /* DASSQuestion.swift in Sources */,
+				D8A62CF92C65C90D0093A158 /* Home.swift in Sources */,
+				D8A62D0B2C65C90D0093A158 /* CodiaWebImageView.swift in Sources */,
+				D8A62CFF2C65C90D0093A158 /* CustomView5.swift in Sources */,
+				D8A62CFC2C65C90D0093A158 /* CustomView2.swift in Sources */,
+				D8A62D052C65C90D0093A158 /* CustomView12.swift in Sources */,
 				D81F5F152C4D0A600028FDA6 /* Assessment.swift in Sources */,
+				D8A62D0F2C65C90D0093A158 /* psychbase_patientappApp.swift in Sources */,
+				D8A62D012C65C90D0093A158 /* CustomView8.swift in Sources */,
 				D8599A8C2C3AA0EB00C9E017 /* HomeHeader.swift in Sources */,
+				D8A62CFE2C65C90D0093A158 /* CustomView4.swift in Sources */,
+				D8A62CFA2C65C90D0093A158 /* Module.swift in Sources */,
+				D8A62D0E2C65C90D0093A158 /* ContentView.swift in Sources */,
 				D8712BF42C58DFE300DF9116 /* Doctor.swift in Sources */,
+				D8A62D092C65C90D0093A158 /* CustomView16.swift in Sources */,
+				D8A62CF32C65C90D0093A158 /* Questionnaire.swift in Sources */,
+				D8A62CFD2C65C90D0093A158 /* CustomView3.swift in Sources */,
+				D8A62D002C65C90D0093A158 /* CustomView7.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
