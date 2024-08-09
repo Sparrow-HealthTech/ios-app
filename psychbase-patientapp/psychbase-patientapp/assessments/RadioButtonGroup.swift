@@ -12,6 +12,7 @@ where Tag : Hashable, CustomButton : View {
     
     let tags: [Tag]
     var buttonSpacing: CGFloat
+    var stackPadding: CGFloat
     @Binding var selection: Tag?
     @ViewBuilder let button: (Bool, Tag) -> CustomButton
     
@@ -28,7 +29,7 @@ where Tag : Hashable, CustomButton : View {
             HStack(alignment: .top, spacing: buttonSpacing) {
                 radioButtons
             }
-            .padding()
+            .padding(stackPadding)
         }
     }
 }

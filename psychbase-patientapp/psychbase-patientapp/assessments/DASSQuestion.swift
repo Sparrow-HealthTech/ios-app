@@ -70,6 +70,7 @@ struct DASSQuestion: View {
                 )
             RadioButtonGroup(tags: Option.allCases,
                              buttonSpacing: 40,
+                             stackPadding: 10,
                              selection: $selection,
                              button: {
                 isSelected, tag in
