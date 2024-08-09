@@ -32,23 +32,8 @@ struct Assessment: View {
                 .frame(maxWidth: .infinity, alignment: .topLeading)
                 .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                 
-                // Finish Assessment
-                HStack(alignment: .center, spacing: 12) {
-                    Button(action: completeAssessment) {
-                        Text("Finish Exercise!")
-                            .font(
-                                Font.custom("Quicksand", size: 16)
-                                    .weight(.bold)
-                            )
-                            .foregroundColor(.white)
-                    }
-                    .padding(.vertical, 10)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .background(Color(red: 0.17, green: 0.63, blue: 0.28))
-                    .cornerRadius(12)
-                }
-                .padding(.horizontal, 30)
-                .frame(maxWidth: .infinity, alignment: .center)
+                ModuleButton(label: "Finish Assessment!",
+                             onClick: completeAssessment)
             }
         }
         .navigationBarBackButtonHidden(true)
