@@ -33,7 +33,8 @@ struct Assessment: View {
                 .background(Color(red: 0.95, green: 0.95, blue: 0.95))
                 
                 ModuleButton(label: "Finish Assessment!",
-                             onClick: completeAssessment)
+                             onClick: completeAssessment,
+                             buttonType: .primary)
             }
         }
         .navigationBarBackButtonHidden(true)
