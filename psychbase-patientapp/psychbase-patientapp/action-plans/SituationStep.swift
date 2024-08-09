@@ -62,8 +62,6 @@ struct SituationStep: View {
                     .foregroundColor(Color(red: 0.16, green: 0.16, blue: 0.17))
                     .frame(maxWidth: .infinity, alignment: .topLeading)
             }
-            .padding(0)
-            .padding(.bottom, 10)
             .frame(maxWidth: .infinity, alignment: .leading)
             
             RadioButtonGroup(tags: SituationEnum.allCases,
@@ -83,17 +81,6 @@ struct SituationStep: View {
             }
             )
         }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 20)
         .frame(maxWidth: .infinity, alignment: .topLeading)
-        .background(.white)
-        .clipShape(
-            .rect(
-                topLeadingRadius: 20,
-                bottomLeadingRadius: 0,
-                bottomTrailingRadius: 0,
-                topTrailingRadius: 20
-            )
-        )
     }
 }

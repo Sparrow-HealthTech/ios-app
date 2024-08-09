@@ -53,17 +53,6 @@ struct SliderStep: View {
                 Text("Very Good")
             }
         }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 20)
         .frame(maxWidth: .infinity, alignment: .topLeading)
-        .background(.white)
-        .clipShape(
-            .rect(
-                topLeadingRadius: 20,
-                bottomLeadingRadius: 0,
-                bottomTrailingRadius: 0,
-                topTrailingRadius: 20
-            )
-        )
     }
 }

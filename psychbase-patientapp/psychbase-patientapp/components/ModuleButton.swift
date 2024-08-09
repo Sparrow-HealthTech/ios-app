@@ -25,7 +25,7 @@ struct ModuleButton: View {
     }
     
     var primaryButton: some View {
-        HStack(alignment: .center, spacing: 12) {
+        HStack {
             Button(action: onClick) {
                 Text(label)
                     .font(
@@ -40,11 +40,10 @@ struct ModuleButton: View {
             .cornerRadius(12)
         }
         .padding(.horizontal, 30)
-        .frame(maxWidth: .infinity, alignment: .center)
     }
     
     var secondaryButton: some View {
-        HStack(alignment: .center, spacing: 12) {
+        HStack {
             Button(action: onClick) {
                 Text(label)
                     .font(
@@ -64,15 +63,19 @@ struct ModuleButton: View {
             )
         }
         .padding(.horizontal, 30)
-        .frame(maxWidth: .infinity, alignment: .center)
     }
 }
 
 struct ButtonPreview: PreviewProvider {
     static func demoFunc() {}
     static var previews: some View {
-        ModuleButton(label: "Click Me!",
-                     onClick: demoFunc,
-                     buttonType: .secondary)
+        VStack {
+            ModuleButton(label: "Click Me!",
+                         onClick: demoFunc,
+                         buttonType: .secondary)
+            ModuleButton(label: "Click Me!",
+                         onClick: demoFunc,
+                         buttonType: .primary)
+        }
     }
 }

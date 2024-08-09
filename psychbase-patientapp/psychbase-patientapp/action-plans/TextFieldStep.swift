@@ -52,17 +52,6 @@ struct TextFieldStep: View {
             .background(Color(red: 0.96, green: 0.96, blue: 0.96))
             .cornerRadius(10)
         }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 20)
         .frame(maxWidth: .infinity, alignment: .topLeading)
-        .background(.white)
-        .clipShape(
-            .rect(
-                topLeadingRadius: 20,
-                bottomLeadingRadius: 0,
-                bottomTrailingRadius: 0,
-                topTrailingRadius: 20
-            )
-        )
     }
 }
