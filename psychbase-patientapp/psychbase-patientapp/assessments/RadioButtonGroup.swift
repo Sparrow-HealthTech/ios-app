@@ -7,27 +7,25 @@
 
 import SwiftUI
 
-struct RadioButtonGroup<Tag, CircleButton, Label>: View
-where Tag : Hashable, CircleButton : View, Label : View {
+struct RadioButtonGroup<Tag, CustomButton>: View
+where Tag : Hashable, CustomButton : View {
     
     let tags: [Tag]
+    var buttonSpacing: CGFloat
     @Binding var selection: Tag?
-    @ViewBuilder let button: (Bool) -> CircleButton
-    @ViewBuilder let label: (Tag) -> Label
+    @ViewBuilder let button: (Bool, Tag) -> CustomButton
     
     @ViewBuilder private var radioButtons: some View {
         ForEach(tags, id: \.self) { tag in
             RadioButton(tag: tag,
                         selection: $selection,
-                        button: button) {
-                        label(tag)
-            }
+                        button: button)
         }
     }
     
     var body: some View {
         ZStack() {
-            HStack(alignment: .top, spacing: 40) {
+            HStack(alignment: .top, spacing: buttonSpacing) {
                 radioButtons
             }
             .padding()

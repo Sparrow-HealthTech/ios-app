@@ -25,6 +25,7 @@ struct SituationStep: View {
         Situation(title: "Other", imgPath: "other-situation"),
     ]
     
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .center, spacing: 12) {

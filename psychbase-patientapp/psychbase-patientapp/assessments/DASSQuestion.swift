@@ -59,37 +59,48 @@ struct DASSQuestion: View {
             .padding(.bottom, 10)
             .frame(maxWidth: .infinity, alignment: .leading)
             Rectangle()
-              .foregroundColor(.clear)
-              .frame(width: 211.93613, height: 212.36)
-              .background(
-                Image(questionImg)
-                  .resizable()
-                  .aspectRatio(contentMode: .fill)
-                  .frame(width: 211.93612670898438, height: 212.36000061035156)
-                  .clipped()
-              )
-            RadioButtonGroup(tags: Option.allCases,
-                             selection: $selection,
-                             button: { isSelected in
-                ZStack {
-                    Image("radio-button")
+                .foregroundColor(.clear)
+                .frame(width: 211.93613, height: 212.36)
+                .background(
+                    Image(questionImg)
                         .resizable()
-                        .frame(width: 30, height: 30)
-                    if isSelected {
-                        Image("selected-radio-button")
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 211.93612670898438, height: 212.36000061035156)
+                        .clipped()
+                )
+            RadioButtonGroup(tags: Option.allCases,
+                             buttonSpacing: 40,
+                             selection: $selection,
+                             button: {
+                isSelected, tag in
+                ZStack {
+                    VStack {
+                        Image("radio-button")
                             .resizable()
                             .frame(width: 30, height: 30)
+                        Text(tag.description)
+                            .font(
+                                Font.custom("Quicksand", size: 14)
+                                    .weight(.medium)
+                            )
+                            .foregroundColor(.black.opacity(0.25))
+                    }
+                    if isSelected {
+                        VStack {
+                            Image("selected-radio-button")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                            Text(tag.description)
+                                .font(
+                                    Font.custom("Quicksand", size: 14)
+                                        .weight(.medium)
+                                )
+                                .foregroundColor(.black.opacity(0.25))
+                        }
                     }
                 }
-            },
-                             label: { tag in
-                Text(tag.description)
-                    .font(
-                        Font.custom("Quicksand", size: 14)
-                            .weight(.medium)
-                    )
-                    .foregroundColor(.black.opacity(0.25))
-            })
+            }
+            )
         }
     }
 }

@@ -7,21 +7,19 @@
 
 import SwiftUI
 
-struct RadioButton<Tag, CircleButton, Label>: View
-where Tag : Hashable, CircleButton : View, Label : View {
+struct RadioButton<Tag, CustomButton>: View
+where Tag : Hashable, CustomButton : View {
     
     let tag: Tag
     @Binding var selection: Tag?
-    @ViewBuilder let button: (Bool) -> CircleButton
-    @ViewBuilder let label: () -> Label
+    @ViewBuilder let button: (Bool, Tag) -> CustomButton
     
     var body: some View {
         Button {
             selection = tag
         } label: {
             VStack {
-                button(selection == tag)
-                label()
+                button(selection == tag, tag)
             }
         }
         .buttonStyle(.plain)
