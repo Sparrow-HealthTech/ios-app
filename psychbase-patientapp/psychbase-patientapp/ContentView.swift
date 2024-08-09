@@ -11,6 +11,7 @@ enum appPages {
     case home
     case actionPlan1
     case assessment1
+    case actionPlan2
 }
 
 struct ContentView: View {
@@ -24,9 +25,11 @@ struct ContentView: View {
             }
             .navigationDestination(for: appPages.self){ appPage in
                 if appPage == .actionPlan1 {
-                    ActionPlan(path: $path)
+                    ThoughtRecord(path: $path)
                 } else if appPage == .assessment1 {
                     Assessment(path: $path)
+                } else if appPage == .actionPlan2 {
+                    ThoughtChallenging(path: $path)
                 }
             }
         }

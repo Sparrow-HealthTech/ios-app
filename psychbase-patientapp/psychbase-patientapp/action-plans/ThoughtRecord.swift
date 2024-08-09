@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-struct ActionPlan: View{
+struct ThoughtRecord: View{
     @Binding var path: [appPages]
     
     let doctorImgPath = "male-doctor-1"
     let doctorSpeechText = "This exercise starts with identifying the cause & impact of your unhelpful thought.\n\nSometimes just noting down these thoughts can soften their effect on you!"
     
     func submitThoughtRecord() {
-        
+        path.removeLast()
     }
     
     func progressToThoughtChallenging() {
-        
+        path.append(.actionPlan2)
     }
     
     var body: some View {
@@ -28,7 +28,9 @@ struct ActionPlan: View{
             ScrollView {
                 VStack(alignment: .leading, spacing: 0){
                     Divider()
-                    Doctor(imgPath: doctorImgPath, speechText: doctorSpeechText)
+                    Doctor(imgPath: doctorImgPath, 
+                           speechText: doctorSpeechText,
+                           speechColor: .green)
                     VStack {
                         VStack(alignment: .leading, spacing: 30) {
                             SituationStep()
@@ -66,9 +68,9 @@ struct ActionPlan: View{
     }
 }
 
-struct ActionPlanPreview: PreviewProvider {
+struct ThoughtRecordPreview: PreviewProvider {
     @State static var path = [appPages.home, appPages.actionPlan1]
     static var previews: some View {
-        ActionPlan(path: $path)
+        ThoughtRecord(path: $path)
     }
 }
