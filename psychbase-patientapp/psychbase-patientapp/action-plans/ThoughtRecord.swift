@@ -35,7 +35,7 @@ struct ThoughtRecord: View{
                         VStack(alignment: .leading, spacing: 30) {
                             SituationStep()
                                 .padding(.top, 20)
-                            SliderStep(moodRating: 50)
+                            MoodStep()
                             TextFieldStep(stepNumber: 3,
                                           stepText: "Write down this thought in as few or many words as you like.",
                                           sampleAnswer: "I think I will do badly on this exam and fail my course.")

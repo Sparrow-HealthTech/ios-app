@@ -7,11 +7,9 @@
 
 import SwiftUI
 
-struct SliderStep: View {
+struct MoodStep: View {
     let stepNumber: Int = 2
     let stepText: String = "How are you feeling right now?"
-    
-    @State var moodRating: Float
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -42,17 +40,9 @@ struct SliderStep: View {
             .padding(.bottom, 10)
             .frame(maxWidth: .infinity, alignment: .leading)
             
-            Slider(
-                value: $moodRating,
-                in: 0...100
-            ) {
-                Text("Speed")
-            } minimumValueLabel: {
-                Text("Very Bad")
-            } maximumValueLabel: {
-                Text("Very Good")
-            }
+            MoodGrid()
         }
         .frame(maxWidth: .infinity, alignment: .topLeading)
     }
+    
 }
