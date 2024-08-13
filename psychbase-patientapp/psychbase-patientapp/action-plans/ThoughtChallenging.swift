@@ -25,6 +25,8 @@ struct ThoughtChallenging: View {
                            speechColor: .orange)
                     VStack {
                         VStack(alignment: .leading, spacing: 30) {
+                            ThoughtTypeStep()
+                                .padding(.top, 20)
                         }
                         .padding(.horizontal, 16)
                     }

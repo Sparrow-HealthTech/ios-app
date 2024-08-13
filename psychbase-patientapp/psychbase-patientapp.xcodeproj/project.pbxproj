@@ -62,6 +62,8 @@
 		D8A62D0D2C65C90D0093A158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A62CEA2C65C90D0093A158 /* Assets.xcassets */; };
 		D8A62D0E2C65C90D0093A158 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CEB2C65C90D0093A158 /* ContentView.swift */; };
 		D8A62D0F2C65C90D0093A158 /* psychbase_patientappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CEC2C65C90D0093A158 /* psychbase_patientappApp.swift */; };
+		D8A875752C6B8825007552FE /* ThoughtTypeStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A875742C6B8825007552FE /* ThoughtTypeStep.swift */; };
+		D8A875772C6B8CB6007552FE /* ThoughtTypeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A875762C6B8CB6007552FE /* ThoughtTypeOption.swift */; };
 		D8BA0A252C65F25E00EE2978 /* SelectedSituationOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA0A242C65F25E00EE2978 /* SelectedSituationOption.swift */; };
 		D8BA0A272C65FF5300EE2978 /* MoodStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA0A262C65FF5200EE2978 /* MoodStep.swift */; };
 		D8C7A6002C6B5C6B00E265FB /* MoodGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A5FF2C6B5C6B00E265FB /* MoodGrid.swift */; };
@@ -146,6 +148,8 @@
 		D8A62CEA2C65C90D0093A158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8A62CEB2C65C90D0093A158 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D8A62CEC2C65C90D0093A158 /* psychbase_patientappApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = psychbase_patientappApp.swift; sourceTree = "<group>"; };
+		D8A875742C6B8825007552FE /* ThoughtTypeStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtTypeStep.swift; sourceTree = "<group>"; };
+		D8A875762C6B8CB6007552FE /* ThoughtTypeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtTypeOption.swift; sourceTree = "<group>"; };
 		D8BA0A242C65F25E00EE2978 /* SelectedSituationOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedSituationOption.swift; sourceTree = "<group>"; };
 		D8BA0A262C65FF5200EE2978 /* MoodStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodStep.swift; sourceTree = "<group>"; };
 		D8C7A5FF2C6B5C6B00E265FB /* MoodGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodGrid.swift; sourceTree = "<group>"; };
@@ -397,14 +401,16 @@
 			isa = PBXGroup;
 			children = (
 				D8E65B7A2C3FB37E00942DCE /* ThoughtRecord.swift */,
+				D826FA622C661EFE0018A230 /* ThoughtChallenging.swift */,
 				D80A8ECA2C5B9B4D00260B6C /* SituationStep.swift */,
 				D80A8ECC2C5BA48700260B6C /* SituationOption.swift */,
 				D8BA0A242C65F25E00EE2978 /* SelectedSituationOption.swift */,
 				D8BA0A262C65FF5200EE2978 /* MoodStep.swift */,
 				D826FA5E2C660A0F0018A230 /* TextFieldStep.swift */,
-				D826FA622C661EFE0018A230 /* ThoughtChallenging.swift */,
 				D8C7A5FF2C6B5C6B00E265FB /* MoodGrid.swift */,
 				D8C7A6012C6B5D9200E265FB /* MoodSubgrid.swift */,
+				D8A875742C6B8825007552FE /* ThoughtTypeStep.swift */,
+				D8A875762C6B8CB6007552FE /* ThoughtTypeOption.swift */,
 			);
 			path = "action-plans";
 			sourceTree = "<group>";
@@ -557,6 +563,7 @@
 				D8A62D022C65C90D0093A158 /* CustomView9.swift in Sources */,
 				D8712BFA2C5914F600DF9116 /* RadioButton.swift in Sources */,
 				D8A62CF72C65C90D0093A158 /* HomeHeader.swift in Sources */,
+				D8A875752C6B8825007552FE /* ThoughtTypeStep.swift in Sources */,
 				D826FA5F2C660A0F0018A230 /* TextFieldStep.swift in Sources */,
 				D8C7A6002C6B5C6B00E265FB /* MoodGrid.swift in Sources */,
 				D8A62D0A2C65C90D0093A158 /* CustomView6.swift in Sources */,
@@ -564,6 +571,7 @@
 				D8F541522C510B79000C3594 /* ModuleHeader.swift in Sources */,
 				D8A62CEF2C65C90D0093A158 /* SituationOption.swift in Sources */,
 				D8A62D082C65C90D0093A158 /* CustomView15.swift in Sources */,
+				D8A875772C6B8CB6007552FE /* ThoughtTypeOption.swift in Sources */,
 				D8712BF62C590D2700DF9116 /* Questionnaire.swift in Sources */,
 				D8A62D072C65C90D0093A158 /* CustomView14.swift in Sources */,
 				D8A62CF42C65C90D0093A158 /* RadioButton.swift in Sources */,
