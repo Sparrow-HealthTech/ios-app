@@ -12,6 +12,8 @@ struct TextFieldStep: View {
     var stepText: String
     var sampleAnswer: String
     
+    @State private var answer: String = ""
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .center, spacing: 12) {
@@ -42,10 +44,13 @@ struct TextFieldStep: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             
             VStack(alignment: .center, spacing: 10) {
-                Text(sampleAnswer)
+                TextField("",
+                          text: $answer,
+                          prompt: Text(sampleAnswer),
+                          axis: .vertical)
                   .font(Font.custom("Quicksand", size: 16))
-                  .foregroundColor(Color(red: 0.7, green: 0.7, blue: 0.7))
                   .frame(maxWidth: .infinity, alignment: .topLeading)
+                  .lineLimit(3...20)
             }
             .padding(20)
             .frame(maxWidth: .infinity, alignment: .center)

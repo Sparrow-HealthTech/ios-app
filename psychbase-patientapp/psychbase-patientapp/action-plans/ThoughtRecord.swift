@@ -24,7 +24,7 @@ struct ThoughtRecord: View{
     var body: some View {
         VStack {
             ModuleHeader(path: $path,
-                         headerTitle: "Thought Challenging")
+                         headerTitle: "Thought Recording")
             ScrollView {
                 VStack(alignment: .leading, spacing: 0){
                     Divider()
@@ -40,10 +40,10 @@ struct ThoughtRecord: View{
                                           stepText: "Write down this thought in as few or many words as you like.",
                                           sampleAnswer: "I think I will do badly on this exam and fail my course.")
                             VStack(alignment: .center, spacing: 10) {
-                                ModuleButton(label: "A thought record should be enough.",
+                                ModuleButton(label: "Submit Thought Record",
                                              onClick: submitThoughtRecord,
                                              buttonType: .secondary)
-                                ModuleButton(label: "Let's challenge this unhelpful thought!",
+                                ModuleButton(label: "Proceed to Thought Challenging",
                                              onClick: progressToThoughtChallenging,
                                              buttonType: .primary)
                             }

@@ -44,7 +44,7 @@ struct Home: View {
         tileHeading: "Assigned Action Plan",
         tileSubtitle: "Your psychologist has assigned this activity to complete as part of your treatment plan.",
         tilePicture: "action-plans",
-        moduleHeading: "Thought Challenging",
+        moduleHeading: "Thought Recording & Challenging",
         moduleSubtitle: "Having an unhelpful thought? Do this 1 min exercise to challenge it and help rewire your brain!",
         buttonLabel: "Start Exercise!"
     )
