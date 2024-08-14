@@ -8,39 +8,46 @@
 import SwiftUI
 
 struct ThoughtTypeOption: View {
+    @Binding var selectedDistortion: String
     var typeImgPath: String
     var typeTitle: String
     var typeDescription: String
     
     func selectType(){
-        
+        selectedDistortion = typeTitle
     }
     
     var body: some View {
         Button(action: selectType){
             HStack(alignment: .center, spacing: 12) {
-                Image("checkbox-circle")
-                    .resizable()
-                    .frame(width: 16, height: 16)
+                if selectedDistortion == typeTitle {
+                    Image("selected-checkbox-circle")
+                        .resizable()
+                        .frame(width: 16, height: 16)
+                } else {
+                    Image("checkbox-circle")
+                        .resizable()
+                        .frame(width: 16, height: 16)
+                }
                 Image(typeImgPath)
                     .resizable()
                     .frame(width: 45, height: 60)
                 
                 VStack(alignment: .leading, spacing: 7) {
                     Text(typeTitle)
-                      .font(
-                        Font.custom("Quicksand", size: 15)
-                          .weight(.semibold)
-                      )
-                      .foregroundColor(.black)
+                        .font(
+                            Font.custom("Quicksand", size: 15)
+                                .weight(.semibold)
+                        )
+                        .foregroundColor(.black)
                     
                     Text(typeDescription)
-                      .font(
-                        Font.custom("Quicksand", size: 13)
-                          .weight(.medium)
-                      )
-                      .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
-                      .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                        .font(
+                            Font.custom("Quicksand", size: 13)
+                                .weight(.medium)
+                        )
+                        .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
+                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                 }
                 .padding(0)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -54,6 +61,13 @@ struct ThoughtTypeOption: View {
                     .inset(by: 0.5)
                     .stroke(Color(red: 0.17, green: 0.63, blue: 0.28).opacity(0.12), lineWidth: 1)
             )
+            .if(selectedDistortion == typeTitle){view in
+                view.overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .inset(by: 0.5)
+                        .stroke(Color(red: 0.17, green: 0.63, blue: 0.28), lineWidth: 1)
+                )
+            }
         }
     }
 }

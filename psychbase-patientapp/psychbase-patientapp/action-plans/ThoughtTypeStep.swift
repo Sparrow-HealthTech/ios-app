@@ -15,6 +15,8 @@ struct ThoughtType: Identifiable {
 }
 
 struct ThoughtTypeStep: View {
+    @State var selectedDistortion = ""
+    
     let stepNumber: Int = 4
     let stepText: String = "What type of unhelpful thought did you have?"
     let thoughtTypes: [ThoughtType] = [
@@ -75,7 +77,8 @@ struct ThoughtTypeStep: View {
             
             VStack {
                 ForEach(thoughtTypes) {thoughtType in
-                    ThoughtTypeOption(typeImgPath: thoughtType.typeImgPath,
+                    ThoughtTypeOption(selectedDistortion: $selectedDistortion,
+                                      typeImgPath: thoughtType.typeImgPath,
                                       typeTitle:  thoughtType.typeTitle,
                                       typeDescription:  thoughtType.typeDescription)
                 }
