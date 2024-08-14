@@ -41,9 +41,10 @@ struct ThoughtTypeOption: View {
                       )
                       .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
                       .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                      .lineLimit(4...5)
                 }
                 .padding(0)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(maxWidth: 150, alignment: .leading)
             }
             .padding(8)
             .frame(maxWidth: .infinity, alignment: .leading)
