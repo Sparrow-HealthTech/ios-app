@@ -29,22 +29,21 @@ struct ThoughtTypeOption: View {
                 VStack(alignment: .leading, spacing: 7) {
                     Text(typeTitle)
                       .font(
-                        Font.custom("Quicksand", size: 14)
+                        Font.custom("Quicksand", size: 15)
                           .weight(.semibold)
                       )
                       .foregroundColor(.black)
                     
                     Text(typeDescription)
                       .font(
-                        Font.custom("Quicksand", size: 12)
+                        Font.custom("Quicksand", size: 13)
                           .weight(.medium)
                       )
                       .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
                       .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                      .lineLimit(4...5)
                 }
                 .padding(0)
-                .frame(maxWidth: 150, alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding(8)
             .frame(maxWidth: .infinity, alignment: .leading)
