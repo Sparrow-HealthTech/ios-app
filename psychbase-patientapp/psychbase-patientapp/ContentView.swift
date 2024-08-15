@@ -12,6 +12,7 @@ enum appPages {
     case actionPlan1
     case assessment1
     case actionPlan2
+    case completionActionPlan
 }
 
 struct ContentView: View {
@@ -30,6 +31,12 @@ struct ContentView: View {
                     Assessment(path: $path)
                 } else if appPage == .actionPlan2 {
                     ThoughtChallenging(path: $path)
+                } else if appPage == .completionActionPlan {
+                    CompletionScreen(path: $path,
+                                     screenHeading: "Well Done!",
+                                     screenDescription: "You’re a step closer to breaking those negative thinking patterns!\n\nMaking a habit of doing this activity will help you along on your journey to good mental health 😊",
+                                     screenImg: "completion-girl-road",
+                                     screenButtonLabel: "Nice!")
                 }
             }
         }
