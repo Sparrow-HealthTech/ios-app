@@ -14,7 +14,7 @@ struct ThoughtRecord: View{
     let doctorSpeechText = "This exercise starts with identifying the cause & impact of your unhelpful thought.\n\nSometimes just noting down these thoughts can soften their effect on you!"
     
     func submitThoughtRecord() {
-        path.removeLast()
+        path.append(.completionThoughtRecording)
     }
     
     func progressToThoughtChallenging() {

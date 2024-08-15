@@ -89,7 +89,6 @@ struct Module: View {
             .padding(.trailing, 8)
             .padding(.vertical, 8)
             .background(Color(red: 0.17, green: 0.63, blue: 0.28))
-
             .cornerRadius(12)
         }
         .padding(12)

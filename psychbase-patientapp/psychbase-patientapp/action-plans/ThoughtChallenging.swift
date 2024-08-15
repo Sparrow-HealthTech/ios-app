@@ -14,7 +14,7 @@ struct ThoughtChallenging: View {
     let doctorSpeechText = "Good job completing the 1st step! Only a little more to go now...\n\nMost unhelpful thoughts are a result of your brain playing silly tricks on itself.\n\nUnderstanding this and reframing your thoughts to be more helpful is key to healing."
     
     func finishChallenging(){
-        path.append(.completionActionPlan)
+        path.append(.completionThoughtChallenging)
     }
     
     var body: some View {

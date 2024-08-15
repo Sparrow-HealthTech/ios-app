@@ -12,7 +12,9 @@ enum appPages {
     case actionPlan1
     case assessment1
     case actionPlan2
-    case completionActionPlan
+    case completionThoughtChallenging
+    case completionThoughtRecording
+    case completionAssessment
 }
 
 struct ContentView: View {
@@ -21,7 +23,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack(path: $path) {
             VStack {
-                HomeHeader()
+                HomeHeader(path: $path)
                 Home(path: $path)
             }
             .navigationDestination(for: appPages.self){ appPage in
@@ -31,12 +33,25 @@ struct ContentView: View {
                     Assessment(path: $path)
                 } else if appPage == .actionPlan2 {
                     ThoughtChallenging(path: $path)
-                } else if appPage == .completionActionPlan {
+                } else if appPage == .completionThoughtChallenging {
                     CompletionScreen(path: $path,
                                      screenHeading: "Well Done!",
                                      screenDescription: "You’re a step closer to breaking those negative thinking patterns!\n\nMaking a habit of doing this activity will help you along on your journey to good mental health 😊",
                                      screenImg: "completion-girl-road",
                                      screenButtonLabel: "Nice!")
+                }
+                else if appPage == .completionThoughtRecording {
+                    CompletionScreen(path: $path,
+                                     screenHeading: "Great Job!",
+                                     screenDescription: "Writing down your thoughts in a journal consistently is a proven way to improve mental health!\n\nGood on you for accomplishing this today! 🥳",
+                                     screenImg: "completion-girl-road",
+                                     screenButtonLabel: "Awesome!")
+                } else if appPage == .completionAssessment {
+                    CompletionScreen(path: $path,
+                                     screenHeading: "Thank You!",
+                                     screenDescription: "The answers you gave here will really help your psychologist understand the state of your mental health and guide your treatment accordindly.\n\nGood on you for taking time out of your day to help your psychologist! 🤩",
+                                     screenImg: "completion-girl-road",
+                                     screenButtonLabel: "Awesome!")
                 }
             }
             .navigationBarBackButtonHidden(true)

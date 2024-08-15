@@ -14,7 +14,7 @@ struct Assessment: View {
     let doctorSpeechText = "This assessment gives your psychologist valuable information to guide your therapy.\n\nIt shouldn’t take more than 2 mins to complete. \n\nDon’t overthink your answers. Trust your intuition!"
     
     func completeAssessment() {
-        path.removeLast()
+        path.append(.completionAssessment)
     }
     
     var body: some View {
