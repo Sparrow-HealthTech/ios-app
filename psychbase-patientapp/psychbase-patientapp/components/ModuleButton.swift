@@ -25,8 +25,8 @@ struct ModuleButton: View {
     }
     
     var primaryButton: some View {
-        HStack {
-            Button(action: onClick) {
+        Button(action: onClick) {
+            HStack {
                 Text(label)
                     .font(
                         Font.custom("Quicksand", size: 16)
@@ -43,8 +43,8 @@ struct ModuleButton: View {
     }
     
     var secondaryButton: some View {
-        HStack {
-            Button(action: onClick) {
+        Button(action: onClick) {
+            HStack {
                 Text(label)
                     .font(
                         Font.custom("Quicksand", size: 16)

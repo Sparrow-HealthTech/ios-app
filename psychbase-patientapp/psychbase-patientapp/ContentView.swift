@@ -39,6 +39,7 @@ struct ContentView: View {
                                      screenButtonLabel: "Nice!")
                 }
             }
+            .navigationBarBackButtonHidden(true)
         }
     }
 }
