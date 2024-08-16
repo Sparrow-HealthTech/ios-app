@@ -66,6 +66,8 @@
 		D8A62D0F2C65C90D0093A158 /* psychbase_patientappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A62CEC2C65C90D0093A158 /* psychbase_patientappApp.swift */; };
 		D8A875752C6B8825007552FE /* ThoughtTypeStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A875742C6B8825007552FE /* ThoughtTypeStep.swift */; };
 		D8A875772C6B8CB6007552FE /* ThoughtTypeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A875762C6B8CB6007552FE /* ThoughtTypeOption.swift */; };
+		D8AFA5A32C6F498F0035E9E2 /* SupportServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AFA5A22C6F498E0035E9E2 /* SupportServices.swift */; };
+		D8AFA5A52C6F4F5D0035E9E2 /* SupportServiceTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AFA5A42C6F4F5D0035E9E2 /* SupportServiceTile.swift */; };
 		D8BA0A252C65F25E00EE2978 /* SelectedSituationOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA0A242C65F25E00EE2978 /* SelectedSituationOption.swift */; };
 		D8BA0A272C65FF5300EE2978 /* MoodStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA0A262C65FF5200EE2978 /* MoodStep.swift */; };
 		D8C7A6002C6B5C6B00E265FB /* MoodGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7A5FF2C6B5C6B00E265FB /* MoodGrid.swift */; };
@@ -154,6 +156,8 @@
 		D8A62CEC2C65C90D0093A158 /* psychbase_patientappApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = psychbase_patientappApp.swift; sourceTree = "<group>"; };
 		D8A875742C6B8825007552FE /* ThoughtTypeStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtTypeStep.swift; sourceTree = "<group>"; };
 		D8A875762C6B8CB6007552FE /* ThoughtTypeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtTypeOption.swift; sourceTree = "<group>"; };
+		D8AFA5A22C6F498E0035E9E2 /* SupportServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportServices.swift; sourceTree = "<group>"; };
+		D8AFA5A42C6F4F5D0035E9E2 /* SupportServiceTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportServiceTile.swift; sourceTree = "<group>"; };
 		D8BA0A242C65F25E00EE2978 /* SelectedSituationOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedSituationOption.swift; sourceTree = "<group>"; };
 		D8BA0A262C65FF5200EE2978 /* MoodStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodStep.swift; sourceTree = "<group>"; };
 		D8C7A5FF2C6B5C6B00E265FB /* MoodGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodGrid.swift; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 				D8712BF32C58DFE300DF9116 /* Doctor.swift */,
 				D826FA602C660C050018A230 /* ModuleButton.swift */,
 				D841F5DC2C6D8A230076D672 /* CompletionScreen.swift */,
+				D8AFA5A22C6F498E0035E9E2 /* SupportServices.swift */,
+				D8AFA5A42C6F4F5D0035E9E2 /* SupportServiceTile.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -596,11 +602,13 @@
 				D8A62CF92C65C90D0093A158 /* Home.swift in Sources */,
 				D8A62D0B2C65C90D0093A158 /* CodiaWebImageView.swift in Sources */,
 				D8A62CFF2C65C90D0093A158 /* CustomView5.swift in Sources */,
+				D8AFA5A52C6F4F5D0035E9E2 /* SupportServiceTile.swift in Sources */,
 				D8A62CFC2C65C90D0093A158 /* CustomView2.swift in Sources */,
 				D826FA632C661EFE0018A230 /* ThoughtChallenging.swift in Sources */,
 				D8A62D052C65C90D0093A158 /* CustomView12.swift in Sources */,
 				D81F5F152C4D0A600028FDA6 /* Assessment.swift in Sources */,
 				D8A62D0F2C65C90D0093A158 /* psychbase_patientappApp.swift in Sources */,
+				D8AFA5A32C6F498F0035E9E2 /* SupportServices.swift in Sources */,
 				D8A62D012C65C90D0093A158 /* CustomView8.swift in Sources */,
 				D8599A8C2C3AA0EB00C9E017 /* HomeHeader.swift in Sources */,
 				D8A62CFE2C65C90D0093A158 /* CustomView4.swift in Sources */,

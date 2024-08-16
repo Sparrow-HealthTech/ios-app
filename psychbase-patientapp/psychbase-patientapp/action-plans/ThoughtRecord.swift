@@ -69,7 +69,7 @@ struct ThoughtRecord: View{
 }
 
 struct ThoughtRecordPreview: PreviewProvider {
-    @State static var path = [appPages.home, appPages.actionPlan1]
+    @State static var path = [appPages.home]
     static var previews: some View {
         ThoughtRecord(path: $path)
     }

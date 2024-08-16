@@ -15,6 +15,7 @@ enum appPages {
     case completionThoughtChallenging
     case completionThoughtRecording
     case completionAssessment
+    case supportServices
 }
 
 struct ContentView: View {
@@ -52,6 +53,8 @@ struct ContentView: View {
                                      screenDescription: "The answers you gave here will really help your psychologist understand the state of your mental health and guide your treatment accordindly.\n\nGood on you for taking time out of your day to help your psychologist! 🤩",
                                      screenImg: "completion-girl-road",
                                      screenButtonLabel: "Awesome!")
+                } else if appPage == .supportServices {
+                    SupportServices(path: $path)
                 }
             }
             .navigationBarBackButtonHidden(true)

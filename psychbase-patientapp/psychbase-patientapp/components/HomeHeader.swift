@@ -11,7 +11,7 @@ struct HomeHeader: View {
     @Binding var path: [appPages]
     
     func goToResources() {
-        
+        path.append(.supportServices)
     }
     
     var body: some View {
