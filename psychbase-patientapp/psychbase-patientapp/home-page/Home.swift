@@ -78,8 +78,9 @@ struct Home: View {
     }
 }
 
-/*
-#Preview {
-    HomeView()
+struct HomePreview: PreviewProvider {
+    @State static var path = [appPages.home]
+    static var previews: some View {
+        Home(path: $path)
+    }
 }
-*/

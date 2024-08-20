@@ -16,7 +16,7 @@ struct CompletionScreen: View {
     var screenButtonLabel: String
     
     func buttonClick(){
-        path.removeAll()
+        path = [.home]
     }
     
     var body: some View {
