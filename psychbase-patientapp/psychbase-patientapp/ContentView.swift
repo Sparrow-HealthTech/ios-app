@@ -23,12 +23,15 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack(path: $path) {
-            VStack {
-                HomeHeader(path: $path)
-                Home(path: $path)
-            }
+            Welcome(path: $path)
             .navigationDestination(for: appPages.self){ appPage in
-                if appPage == .actionPlan1 {
+                if appPage == .home {
+                    VStack {
+                        HomeHeader(path: $path)
+                        Home(path: $path)
+                    }
+                }
+                else if appPage == .actionPlan1 {
                     ThoughtRecord(path: $path)
                 } else if appPage == .assessment1 {
                     Assessment(path: $path)
