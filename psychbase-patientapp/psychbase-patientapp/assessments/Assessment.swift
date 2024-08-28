@@ -42,6 +42,15 @@ struct Assessment: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .topLeading)
                 .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+                .padding(.bottom, 0)
+                
+                HStack {
+                    Text("**Note:** If you are thinking about self-harm, it’s important that you talk to someone about what you’re going through. \n\nPlease contact your psychologist or refer to our resources page for information on support services.")
+                }
+                .frame(maxWidth: .infinity, alignment: .topLeading)
+                .foregroundColor(.red)
+                .padding()
+                .padding(.top, 0)
                 
                 ModuleButton(label: "Finish Assessment!",
                              onClick: completeAssessment,
