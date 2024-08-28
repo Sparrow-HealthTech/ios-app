@@ -43,7 +43,7 @@ struct CompletionScreen: View {
             // Image
             Image(screenImg)
                 .resizable()
-                .frame(width: 308, height: 406)
+                .frame(maxWidth: .infinity, maxHeight: 350)
                 .padding(20)
             // Button
             ModuleButton(label: screenButtonLabel,

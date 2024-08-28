@@ -14,15 +14,23 @@ enum PINStage {
 
 struct SetPINScreen: View {
     @Binding var path: [appPages]
-    
     @State var pinStage = PINStage.input
+    @State var pinNotMatching = false
+    @State var inputPIN = ""
     
     func inputPIN(PIN: String){
+        inputPIN = PIN
         pinStage = .confirm
     }
 
     func confirmPIN(PIN: String){
-        path = [.completionOnboarding]
+        if inputPIN != PIN {
+            pinNotMatching = true
+            pinStage = .input
+        }
+        else {
+            path = [.completionOnboarding]
+        }
     }
     
     var body: some View {
@@ -57,6 +65,12 @@ struct SetPINScreen: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity,
                alignment: .center)
+        .alert(isPresented: $pinNotMatching){
+            Alert(title: Text("PINs don't match"),
+                  message: Text("Please re-enter your PIN code."),
+                  dismissButton: .default(Text("Got it!"))
+            )
+        }
     }
     
     var inputPINView: some View {

@@ -26,7 +26,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack(path: $path) {
-            Welcome(path: $path, isFirstTime: false)
+            Welcome(path: $path, isFirstTime: true)
             .navigationDestination(for: appPages.self){ appPage in
                 if appPage == .home {
                     VStack {

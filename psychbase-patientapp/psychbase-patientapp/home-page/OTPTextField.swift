@@ -10,7 +10,7 @@ import Combine
 
 struct OTPTextField: View {
     @FocusState private var keyboardFocusField: FocusField?
-    @Binding var verificationCode: String
+    @Binding var PIN: String
     @State var isAllNumbersFilled: Bool = false
     
     var pinLength = 6
@@ -19,7 +19,7 @@ struct OTPTextField: View {
     
     var body: some View {
         ZStack {
-            TextField("", text: $verificationCode)
+            TextField("", text: $PIN)
                 .frame(width: 0, height: 0, alignment: .center)
                 .font(Font.system(size: 0))
                 .accentColor(.white)
@@ -33,14 +33,14 @@ struct OTPTextField: View {
                         self.keyboardFocusField = .field
                     }
                 }
-                .onReceive(Just(verificationCode)) { _ in
-                    if verificationCode.count > pinLength {
-                        verificationCode = String(verificationCode.prefix(pinLength))
+                .onReceive(Just(PIN)) { _ in
+                    if PIN.count > pinLength {
+                        PIN = String(PIN.prefix(pinLength))
                     }
                     
-                    if verificationCode.count == pinLength && !isAllNumbersFilled {
+                    if PIN.count == pinLength && !isAllNumbersFilled {
                         onComplete()
-                    } else if verificationCode.count < pinLength {
+                    } else if PIN.count < pinLength {
                         isAllNumbersFilled = false
                     }
                 }

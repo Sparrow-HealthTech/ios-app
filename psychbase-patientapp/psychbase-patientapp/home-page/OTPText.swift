@@ -16,13 +16,13 @@ struct OTPText: View {
     var keyboardType: UIKeyboardType
     var onComplete: (String) -> ()
     
-    @State private var verificationCode = ""
+    @State private var PIN = ""
     @FocusState private var focusField: FocusField?
     
     var body: some View {
         ZStack(alignment: .center) {
-            OTPTextField(verificationCode: $verificationCode, pinLength: pinLength, keyboardType: keyboardType) {
-                onComplete(verificationCode)
+            OTPTextField(PIN: $PIN, pinLength: pinLength, keyboardType: keyboardType) {
+                onComplete(PIN)
             }
             HStack {
                 ForEach(0..<pinLength, id: \.self) { i in
@@ -37,7 +37,7 @@ struct OTPText: View {
                             .foregroundColor(.white)
                             .padding(.trailing, 5)
                             .padding(.leading, 5)
-                            .opacity(verificationCode.count <= i ? 1 : 0)
+                            .opacity(PIN.count <= i ? 1 : 0)
                             .padding(.vertical, 35)
                     }
                 }
@@ -51,10 +51,14 @@ struct OTPText: View {
     }
     
     func getPin(at index: Int) -> String {
-        guard self.verificationCode.count > index else {
+        guard self.PIN.count > index else {
             return ""
         }
         
-        return String(verificationCode[index])
+        if self.PIN.count == index + 1 {
+            return String(PIN[index])
+        } else {
+            return "*"
+        }
     }
 }
