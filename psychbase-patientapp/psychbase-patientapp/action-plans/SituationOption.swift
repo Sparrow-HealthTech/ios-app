@@ -10,6 +10,8 @@ import SwiftUI
 struct SituationOption: View {
     @Binding var selectedOptions: [SituationEnum]
     var situation: SituationEnum
+    @State var showOtherDialog: Bool = false
+    @State var otherInput: String = ""
     
     let greenColor = Color(red: 0.17, green: 0.63, blue: 0.28)
     
@@ -19,12 +21,22 @@ struct SituationOption: View {
         } else {
             selectedOptions.append(situation)
         }
+        if situation == .other {
+            showOtherDialog = true
+        }
     }
     
     var body: some View {
         Button(action: situationClick) {
             if selectedOptions.contains(situation) {
                 selectedOption
+                    .alert("Other Situation", isPresented: $showOtherDialog) {
+                        TextField("Math course", text: $otherInput)
+                        Button("OK", action: {
+                            print("Text entered: \(otherInput)")
+                        })
+                        Button("Cancel", role: .cancel) { }
+                    }
             } else {
                 option
             }
