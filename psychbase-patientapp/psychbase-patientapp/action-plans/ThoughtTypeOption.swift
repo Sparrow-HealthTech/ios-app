@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct ThoughtTypeOption: View {
-    @Binding var selectedDistortion: String
+    @Binding var selectedDistortions: [String]
     var typeImgPath: String
     var typeTitle: String
     var typeDescription: String
     
     func selectType(){
-        selectedDistortion = typeTitle
+        if selectedDistortions.contains(typeTitle) {
+            selectedDistortions.removeAll{$0 == typeTitle}
+        } else {
+            selectedDistortions.append(typeTitle)
+        }
     }
     
     var body: some View {
         Button(action: selectType){
             HStack(alignment: .center, spacing: 12) {
-                if selectedDistortion == typeTitle {
+                if selectedDistortions.contains(typeTitle) {
                     Image("selected-checkbox-circle")
                         .resizable()
                         .frame(width: 16, height: 16)
@@ -61,7 +65,7 @@ struct ThoughtTypeOption: View {
                     .inset(by: 0.5)
                     .stroke(Color(red: 0.17, green: 0.63, blue: 0.28).opacity(0.12), lineWidth: 1)
             )
-            .if(selectedDistortion == typeTitle){view in
+            .if(selectedDistortions.contains(typeTitle)){view in
                 view.overlay(
                     RoundedRectangle(cornerRadius: 12)
                         .inset(by: 0.5)

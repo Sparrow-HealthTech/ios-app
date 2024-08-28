@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MoodGrid: View {
-    @State var selectedMood: String = ""
+    @State var selectedMoods: [String] = []
     
     let subgridHeight: CGFloat = 140
     
@@ -53,13 +53,13 @@ struct MoodGrid: View {
             GridRow {
                 // Red Tile
                 VStack(alignment: .leading, spacing: 0) {
-                    MoodSubgrid(selectedMood: $selectedMood,
+                    MoodSubgrid(selectedMoods: $selectedMoods,
                                 gradient: redGradient,
                                 emotions: ["Enraged", "Stressed", "Shocked"])
-                    MoodSubgrid(selectedMood: $selectedMood,
+                    MoodSubgrid(selectedMoods: $selectedMoods,
                                 gradient: redGradient,
                                 emotions: ["Fuming", "Angry", "Restless"])
-                    MoodSubgrid(selectedMood: $selectedMood,
+                    MoodSubgrid(selectedMoods: $selectedMoods,
                                 gradient: redGradient,
                                 emotions: ["Repulsed", "Worried", "Uneasy"])
                 }
@@ -67,13 +67,13 @@ struct MoodGrid: View {
                 
                 // Yellow Tile
                 VStack(alignment: .leading, spacing: 0) {
-                    MoodSubgrid(selectedMood: $selectedMood,
+                    MoodSubgrid(selectedMoods: $selectedMoods,
                                 gradient: yellowGradient,
                                 emotions: ["Surprised", "Festive", "Ecstatic"])
-                    MoodSubgrid(selectedMood: $selectedMood,
+                    MoodSubgrid(selectedMoods: $selectedMoods,
                                 gradient: yellowGradient,
                                 emotions: ["Energised", "Optimistic", "Excited"])
-                    MoodSubgrid(selectedMood: $selectedMood,
+                    MoodSubgrid(selectedMoods: $selectedMoods,
                                 gradient: yellowGradient,
                                 emotions: ["Pleasant", "Hopeful", "Blissful"])
                 }
@@ -84,13 +84,13 @@ struct MoodGrid: View {
             GridRow {
                 // Blue tile
                 VStack(alignment: .leading, spacing: 0) {
-                    MoodSubgrid(selectedMood: $selectedMood,
+                    MoodSubgrid(selectedMoods: $selectedMoods,
                                 gradient: blueGradient,
                                 emotions: ["Disgusted", "Down", "Apathetic"])
-                    MoodSubgrid(selectedMood: $selectedMood,
+                    MoodSubgrid(selectedMoods: $selectedMoods,
                                 gradient: blueGradient,
                                 emotions: ["Miserable", "Lonely", "Tired"])
-                    MoodSubgrid(selectedMood: $selectedMood,
+                    MoodSubgrid(selectedMoods: $selectedMoods,
                                 gradient: blueGradient,
                                 emotions: ["Despair", "Desolate", "Drained"])
                 }
@@ -100,13 +100,13 @@ struct MoodGrid: View {
                 
                 // Green Tile
                 VStack(alignment: .leading, spacing: 0) {
-                    MoodSubgrid(selectedMood: $selectedMood,
+                    MoodSubgrid(selectedMoods: $selectedMoods,
                                 gradient: greenGradient,
                                 emotions: ["At ease", "Content", "Fulfilled"])
-                    MoodSubgrid(selectedMood: $selectedMood,
+                    MoodSubgrid(selectedMoods: $selectedMoods,
                                 gradient: greenGradient,
                                 emotions: ["Relaxed", "Restful", "Balanced"])
-                    MoodSubgrid(selectedMood: $selectedMood,
+                    MoodSubgrid(selectedMoods: $selectedMoods,
                                 gradient: greenGradient,
                                 emotions: ["Sleepy", "Tranquil", "Serene"])
                 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MoodSubgrid: View {
-    @Binding var selectedMood: String
+    @Binding var selectedMoods: [String]
     var gradient: LinearGradient
     var emotions: [String]
     
@@ -16,13 +16,25 @@ struct MoodSubgrid: View {
     let reducedOpacity: CGFloat = 0.45
     
     func leftCellClick() {
-        selectedMood = emotions[0]
+        if selectedMoods.contains(emotions[0]) {
+            selectedMoods.removeAll{$0 == emotions[0]}
+        } else {
+            selectedMoods.append(emotions[0])
+        }
     }
     func midCellClick() {
-        selectedMood = emotions[1]
+        if selectedMoods.contains(emotions[1]) {
+            selectedMoods.removeAll{$0 == emotions[1]}
+        } else {
+            selectedMoods.append(emotions[1])
+        }
     }
     func rightCellClick() {
-        selectedMood = emotions[2]
+        if selectedMoods.contains(emotions[2]) {
+            selectedMoods.removeAll{$0 == emotions[2]}
+        } else {
+            selectedMoods.append(emotions[2])
+        }
     }
     
     var body: some View {
@@ -43,7 +55,7 @@ struct MoodSubgrid: View {
                     .stroke(.white, lineWidth: 1)
             )
             .background(gradient)
-            .if(selectedMood != emotions[0] && selectedMood != ""){
+            .if(!selectedMoods.contains(emotions[0]) && !selectedMoods.isEmpty){
                 view in view.opacity(reducedOpacity)
             }
             
@@ -63,7 +75,7 @@ struct MoodSubgrid: View {
                     .stroke(.white, lineWidth: 1)
             )
             .background(gradient)
-            .if(selectedMood != emotions[1] && selectedMood != ""){
+            .if(!selectedMoods.contains(emotions[1]) && !selectedMoods.isEmpty){
                 view in view.opacity(reducedOpacity)
             }
             
@@ -83,7 +95,7 @@ struct MoodSubgrid: View {
                     .stroke(.white, lineWidth: 1)
             )
             .background(gradient)
-            .if(selectedMood != emotions[2] && selectedMood != ""){
+            .if(!selectedMoods.contains(emotions[2]) && !selectedMoods.isEmpty){
                 view in view.opacity(reducedOpacity)
             }
         }
