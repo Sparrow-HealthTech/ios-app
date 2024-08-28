@@ -13,7 +13,7 @@ struct ThoughtRecord: View {
     @State var isMandatoryFieldsEmpty: Bool = false
     
     let doctorImgPath = "male-doctor-1"
-    let doctorSpeechText = "This exercise starts with identifying the cause & impact of your unhelpful thought.\n\nSometimes just noting down these thoughts can soften their effect on you!"
+    let doctorSpeechText = "This exercise involves identifying the cause & impact of your unhelpful thought.\n\nSometimes just noting down these thoughts can soften their effect on you!"
     
     func submitThoughtRecord() {
         if formData.selectedSituations.isEmpty || formData.selectedMoods.isEmpty {

@@ -10,6 +10,7 @@ import SwiftUI
 struct Assessment: View {
     @Binding var path: [appPages]
     @Binding var formData: AssessmentForm
+    @Binding var assessmentTileData: ModuleTileData
     
     let doctorImgPath = "male-doctor-1"
     let doctorSpeechText = "This assessment gives your psychologist valuable information to guide your therapy.\n\nIt shouldn’t take more than 2 mins to complete. \n\nDon’t overthink your answers. Trust your intuition!"
@@ -21,6 +22,8 @@ struct Assessment: View {
         if formData.isAnyAnswerEmpty() {
             isMandatoryFieldsEmpty = true
         } else {
+            assessmentTileData = .init(type: .assessment)
+            assessmentTileData.markAssessmentAsComplete()
             path.append(.completionAssessment)
         }
     }
@@ -70,7 +73,10 @@ struct Assessment: View {
 struct AssessmentPreview: PreviewProvider {
     @State static var path = [appPages.home, appPages.assessment1]
     @State static var formData = AssessmentForm()
+    @State static var assessmentTileData  = ModuleTileData(type: .assessment)
     static var previews: some View {
-        Assessment(path: $path, formData: $formData)
+        Assessment(path: $path, 
+                   formData: $formData,
+                   assessmentTileData: $assessmentTileData)
     }
 }

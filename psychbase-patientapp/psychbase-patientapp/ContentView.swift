@@ -23,22 +23,27 @@ struct ContentView: View {
     @State var path: [appPages] = []
     @State var actionPlanForm = ActionPlanForm()
     @State var assessmentForm = AssessmentForm()
+    @State var actionPlanTileData  = ModuleTileData(type: .actionPlan)
+    @State var assessmentTileData  = ModuleTileData(type: .assessment)
     
     var body: some View {
         NavigationStack(path: $path) {
-            Welcome(path: $path, isFirstTime: true)
+            Welcome(path: $path, isFirstTime: false)
             .navigationDestination(for: appPages.self){ appPage in
                 if appPage == .home {
                     VStack {
                         HomeHeader(path: $path)
-                        Home(path: $path)
+                        Home(path: $path,
+                             actionPlanTileData: $actionPlanTileData,
+                             assessmentTileData: $assessmentTileData)
                     }
                     .navigationBarBackButtonHidden(true)
                 }
                 else if appPage == .actionPlan1 {
                     ThoughtRecord(path: $path, formData: $actionPlanForm)
                 } else if appPage == .assessment1 {
-                    Assessment(path: $path, formData: $assessmentForm)
+                    Assessment(path: $path, formData: $assessmentForm,
+                               assessmentTileData: $assessmentTileData)
                 } else if appPage == .actionPlan2 {
                     ThoughtChallenging(path: $path, formData: $actionPlanForm)
                 } else if appPage == .supportServices {

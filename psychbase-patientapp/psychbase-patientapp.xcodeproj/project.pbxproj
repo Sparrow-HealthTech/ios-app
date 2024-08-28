@@ -19,7 +19,7 @@
 		D852FB462C74782E00053BC3 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = D852FB452C74782E00053BC3 /* Welcome.swift */; };
 		D8599A8C2C3AA0EB00C9E017 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8599A8B2C3AA0EB00C9E017 /* HomeHeader.swift */; };
 		D8599A902C3AB4C900C9E017 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8599A8F2C3AB4C900C9E017 /* Home.swift */; };
-		D8599A922C3AB58B00C9E017 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8599A912C3AB58B00C9E017 /* Module.swift */; };
+		D8599A922C3AB58B00C9E017 /* ModuleTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8599A912C3AB58B00C9E017 /* ModuleTile.swift */; };
 		D85E09A62C3A8FCB0075759E /* psychbase_patientappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E09A52C3A8FCB0075759E /* psychbase_patientappApp.swift */; };
 		D85E09A82C3A8FCB0075759E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85E09A72C3A8FCB0075759E /* ContentView.swift */; };
 		D85E09AA2C3A8FCD0075759E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D85E09A92C3A8FCD0075759E /* Assets.xcassets */; };
@@ -80,7 +80,7 @@
 		D852FB452C74782E00053BC3 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		D8599A8B2C3AA0EB00C9E017 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
 		D8599A8F2C3AB4C900C9E017 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		D8599A912C3AB58B00C9E017 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		D8599A912C3AB58B00C9E017 /* ModuleTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTile.swift; sourceTree = "<group>"; };
 		D85E09A22C3A8FCB0075759E /* psychbase-patientapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "psychbase-patientapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D85E09A52C3A8FCB0075759E /* psychbase_patientappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = psychbase_patientappApp.swift; sourceTree = "<group>"; };
 		D85E09A72C3A8FCB0075759E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				D8599A8F2C3AB4C900C9E017 /* Home.swift */,
-				D8599A912C3AB58B00C9E017 /* Module.swift */,
+				D8599A912C3AB58B00C9E017 /* ModuleTile.swift */,
 				D852FB452C74782E00053BC3 /* Welcome.swift */,
 				D8ED4D642C7496E0003E920E /* WelcomeFlash.swift */,
 				D8ED4D662C7496EE003E920E /* WelcomeAuth.swift */,
@@ -396,7 +396,7 @@
 				D85E09A82C3A8FCB0075759E /* ContentView.swift in Sources */,
 				D8C7A6022C6B5D9200E265FB /* MoodTile.swift in Sources */,
 				D80A8ECB2C5B9B4D00260B6C /* SituationStep.swift in Sources */,
-				D8599A922C3AB58B00C9E017 /* Module.swift in Sources */,
+				D8599A922C3AB58B00C9E017 /* ModuleTile.swift in Sources */,
 				D8ED4D652C7496E0003E920E /* WelcomeFlash.swift in Sources */,
 				D80A8ECD2C5BA48700260B6C /* SituationOption.swift in Sources */,
 				D8BA0A272C65FF5300EE2978 /* MoodStep.swift in Sources */,

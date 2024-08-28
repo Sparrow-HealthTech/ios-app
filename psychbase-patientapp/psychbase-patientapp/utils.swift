@@ -6,6 +6,48 @@
 //
 import SwiftUI
 
+enum moduleType {
+    case actionPlan
+    case assessment
+}
+
+class ModuleTileData: ObservableObject {
+    let type: moduleType
+    let tileHeading: String
+    let tileSubtitle: String
+    let tilePicture: String
+    let moduleHeading: String
+    let moduleSubtitle: String
+    var buttonLabel: String
+    var isButtonDisabled: Bool
+    
+    init(type: moduleType) {
+        self.type = type
+        if self.type == .actionPlan {
+            self.tileHeading = "Assigned Action Plan"
+            self.tileSubtitle = "Your psychologist has assigned this activity to complete as part of your treatment plan."
+            self.tilePicture = "action-plans"
+            self.moduleHeading = "Thought Recording & Challenging"
+            self.moduleSubtitle = "Having an unhelpful thought? Do this 1 min exercise to help rewire your brain!"
+            self.buttonLabel = "Start Exercise!"
+            self.isButtonDisabled = false
+        } else {
+            self.tileHeading = "Assigned Assessment"
+            self.tileSubtitle = "To see how you’re progressing your psychologist needs you to complete the following assessment."
+            self.tilePicture = "assessments-tile"
+            self.moduleHeading = "DASS-10 Questionaire"
+            self.moduleSubtitle = "This 2 min survey measures your depression, anxiety & stress levels."
+            self.buttonLabel = "Complete Survey"
+            self.isButtonDisabled = false
+        }
+    }
+    
+    func markAssessmentAsComplete() {
+        isButtonDisabled = true
+        buttonLabel = "Already Done!"
+    }
+}
+
 class ActionPlanForm: CustomStringConvertible {
     private var _selectedSituations: [String] = []
     private var _selectedMoods: [String] = []

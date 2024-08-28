@@ -7,57 +7,10 @@
 
 import SwiftUI
 
-enum moduleState {
-    case notStarted
-    case inProgress
-}
-
-enum moduleType {
-    case actionPlan
-    case assessment
-}
-
-struct ModuleData {
-    let type: moduleType
-    let tileHeading: String
-    let tileSubtitle: String
-    let tilePicture: String
-    let moduleHeading: String
-    let moduleSubtitle: String
-    var buttonLabel: String
-    var state = moduleState.notStarted
-    
-    mutating func updateButtonLabel(newLabel: String) {
-        buttonLabel = newLabel
-    }
-    
-    mutating func startModule() {
-        state = moduleState.inProgress
-    }
-}
-
 struct Home: View {
     @Binding var path: [appPages]
-    
-    @State var actionPlanTile  = ModuleData(
-        type: moduleType.actionPlan,
-        tileHeading: "Assigned Action Plan",
-        tileSubtitle: "Your psychologist has assigned this activity to complete as part of your treatment plan.",
-        tilePicture: "action-plans",
-        moduleHeading: "Thought Recording & Challenging",
-        moduleSubtitle: "Having an unhelpful thought? Do this 1 min exercise to challenge it and help rewire your brain!",
-        buttonLabel: "Start Exercise!"
-    )
-    
-    @State var assessmentTile  = ModuleData(
-        type: moduleType.assessment,
-        tileHeading: "Assigned Assessment",
-        tileSubtitle: "To see how you’re progressing your psychologist needs you to complete the following assessment.",
-        tilePicture: "assessments-tile",
-        moduleHeading: "DASS-10 Questionaire",
-        moduleSubtitle: "This 2 min survey measures your depression, anxiety & stress levels.",
-        buttonLabel: "ToDo - This Week"
-    )
+    @Binding var actionPlanTileData: ModuleTileData
+    @Binding var assessmentTileData: ModuleTileData
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0){
@@ -66,8 +19,8 @@ struct Home: View {
                 ScrollView(){
                     VStack(spacing: 20){
                         Spacer()
-                        Module(path: $path, tileData: $actionPlanTile)
-                        Module(path: $path, tileData: $assessmentTile)
+                        ModuleTile(path: $path, tileData: $actionPlanTileData)
+                        ModuleTile(path: $path, tileData: $assessmentTileData)
                     }
                 }
             }
@@ -81,7 +34,9 @@ struct Home: View {
 
 struct HomePreview: PreviewProvider {
     @State static var path = [appPages.home]
+    @State static var actionPlanTileData  = ModuleTileData(type: .actionPlan)
+    @State static var assessmentTileData  = ModuleTileData(type: .assessment)
     static var previews: some View {
-        Home(path: $path)
+        Home(path: $path, actionPlanTileData: $actionPlanTileData, assessmentTileData: $assessmentTileData)
     }
 }

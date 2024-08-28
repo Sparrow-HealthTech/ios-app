@@ -13,7 +13,7 @@ struct ThoughtChallenging: View {
     @State var isMandatoryFieldsEmpty: Bool = false
     
     let doctorImgPath = "female-doctor-1"
-    let doctorSpeechText = "Good job completing the 1st step! Only a little more to go now...\n\nMost unhelpful thoughts are a result of your brain playing silly tricks on itself.\n\nUnderstanding this and reframing your thoughts to be more helpful is key to healing."
+    let doctorSpeechText = "Good job completing your thought record. Now let's challenge it!\n\nMost unhelpful thoughts are a result of your brain playing silly tricks on itself.\n\nUnderstanding this and reframing your thoughts to be more helpful is key to healing."
     
     func finishChallenging(){
         if formData.selectedDistortions.isEmpty || formData.outcomeRating == "" {
