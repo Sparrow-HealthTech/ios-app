@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Option: CaseIterable, CustomStringConvertible {
+enum DASSOption: CaseIterable, CustomStringConvertible {
     case never, sometimes, often, almostAlways
     
     var description: String {
@@ -19,22 +19,20 @@ enum Option: CaseIterable, CustomStringConvertible {
         case .often:
             return "Often"
         case .almostAlways:
-            return "Almost\nAlways"
+            return "Almost Always"
         }
     }
 }
 
 struct DASSQuestion: View {
-    var questionNumber: Int
-    var questionText: String
-    var questionImg: String
-    @State private var selection: Option?
+    var questionData: DASSQuestionData
+    @State private var selection: DASSOption?
     
     var body: some View {
         VStack() {
             HStack(alignment: .center, spacing: 12) {
                 HStack(alignment: .center, spacing: 8) {
-                    Text(String(questionNumber))
+                    Text(String(questionData.questionNumber))
                         .font(
                             Font.custom("Quicksand", size: 14)
                                 .weight(.bold)
@@ -48,7 +46,7 @@ struct DASSQuestion: View {
                     RoundedRectangle(cornerRadius: 100)
                         .inset(by: 0.5)
                         .stroke(Color(red: 0.17, green: 0.63, blue: 0.28), lineWidth: 1))
-                Text(questionText)
+                Text(questionData.questionText)
                     .font(
                         Font.custom("Quicksand", size: 16)
                             .weight(.semibold))
@@ -62,13 +60,13 @@ struct DASSQuestion: View {
                 .foregroundColor(.clear)
                 .frame(width: 211.93613, height: 212.36)
                 .background(
-                    Image(questionImg)
+                    Image(questionData.questionImg)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 211.93612670898438, height: 212.36000061035156)
                         .clipped()
                 )
-            RadioButtonGroup(tags: Option.allCases,
+            RadioButtonGroup(tags: DASSOption.allCases,
                              buttonSpacing: 40,
                              stackPadding: 10,
                              selection: $selection,
@@ -102,6 +100,9 @@ struct DASSQuestion: View {
                 }
             }
             )
+            .onChange(of: selection){
+                questionData.answer = (selection?.description ?? "Error in line 104 - DASSQuestion.swift")
+            }
         }
     }
 }

@@ -22,6 +22,7 @@ enum appPages {
 struct ContentView: View {
     @State var path: [appPages] = []
     @State var actionPlanForm = ActionPlanForm()
+    @State var assessmentForm = AssessmentForm()
     
     var body: some View {
         NavigationStack(path: $path) {
@@ -37,7 +38,7 @@ struct ContentView: View {
                 else if appPage == .actionPlan1 {
                     ThoughtRecord(path: $path, formData: $actionPlanForm)
                 } else if appPage == .assessment1 {
-                    Assessment(path: $path)
+                    Assessment(path: $path, formData: $assessmentForm)
                 } else if appPage == .actionPlan2 {
                     ThoughtChallenging(path: $path, formData: $actionPlanForm)
                 } else if appPage == .supportServices {

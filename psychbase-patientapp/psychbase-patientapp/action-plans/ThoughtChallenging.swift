@@ -16,10 +16,9 @@ struct ThoughtChallenging: View {
     let doctorSpeechText = "Good job completing the 1st step! Only a little more to go now...\n\nMost unhelpful thoughts are a result of your brain playing silly tricks on itself.\n\nUnderstanding this and reframing your thoughts to be more helpful is key to healing."
     
     func finishChallenging(){
-        if formData.selectedDistortions.isEmpty || formData.outcomeRating.isEmpty {
+        if formData.selectedDistortions.isEmpty || formData.outcomeRating == "" {
             isMandatoryFieldsEmpty = true
         } else {
-            print(formData)
             path.append(.completionThoughtChallenging)
         }
     }

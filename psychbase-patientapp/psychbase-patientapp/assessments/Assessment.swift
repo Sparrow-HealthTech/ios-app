@@ -9,12 +9,20 @@ import SwiftUI
 
 struct Assessment: View {
     @Binding var path: [appPages]
+    @Binding var formData: AssessmentForm
     
     let doctorImgPath = "male-doctor-1"
     let doctorSpeechText = "This assessment gives your psychologist valuable information to guide your therapy.\n\nIt shouldn’t take more than 2 mins to complete. \n\nDon’t overthink your answers. Trust your intuition!"
     
+    @State var isMandatoryFieldsEmpty: Bool = false
+    
     func completeAssessment() {
-        path.append(.completionAssessment)
+        print(formData)
+        if formData.isAnyAnswerEmpty() {
+            isMandatoryFieldsEmpty = true
+        } else {
+            path.append(.completionAssessment)
+        }
     }
     
     var body: some View {
@@ -29,7 +37,7 @@ struct Assessment: View {
                                speechText: doctorSpeechText,
                                speechColor: .green
                         )
-                        Questionnaire()
+                        Questionnaire(formData: $formData)
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .topLeading)
@@ -41,12 +49,19 @@ struct Assessment: View {
             }
         }
         .navigationBarBackButtonHidden(true)
+        .alert(isPresented: $isMandatoryFieldsEmpty){
+            Alert(title: Text("Incomplete Questionnaire"),
+                  message: Text("Please answer all questions in this assessment."),
+                  dismissButton: .default(Text("Got it!"))
+            )
+        }
     }
 }
 
 struct AssessmentPreview: PreviewProvider {
     @State static var path = [appPages.home, appPages.assessment1]
+    @State static var formData = AssessmentForm()
     static var previews: some View {
-        Assessment(path: $path)
+        Assessment(path: $path, formData: $formData)
     }
 }
