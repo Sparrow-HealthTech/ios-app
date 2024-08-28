@@ -27,6 +27,7 @@ enum Rating: CaseIterable, CustomStringConvertible {
 }
 
 struct OutcomeRatingStep: View {
+    @Binding var formData: ActionPlanForm
     var stepNumber: Int
     var stepText: String
     @State private var selection: Rating?

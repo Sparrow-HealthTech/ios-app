@@ -19,8 +19,20 @@ enum appPages {
     case completionOnboarding
 }
 
+struct ActionPlanForm {
+    var selectedSituations: [String] = []
+    var selectedMoods: [String] = []
+    var thoughtTxt: String = ""
+    var selectedDistortions: [String] = []
+    var evidenceForTxt: String = ""
+    var evidenceAgainstTxt: String = ""
+    var balancedThoughtTxt: String = ""
+    var outcomeRating: String = ""
+}
+
 struct ContentView: View {
     @State var path: [appPages] = []
+    @State var actionPlanForm = ActionPlanForm()
     
     var body: some View {
         NavigationStack(path: $path) {
@@ -34,11 +46,11 @@ struct ContentView: View {
                     .navigationBarBackButtonHidden(true)
                 }
                 else if appPage == .actionPlan1 {
-                    ThoughtRecord(path: $path)
+                    ThoughtRecord(path: $path, formData: $actionPlanForm)
                 } else if appPage == .assessment1 {
                     Assessment(path: $path)
                 } else if appPage == .actionPlan2 {
-                    ThoughtChallenging(path: $path)
+                    ThoughtChallenging(path: $path, formData: $actionPlanForm)
                 } else if appPage == .supportServices {
                     SupportServices(path: $path)
                 } else if appPage == .completionThoughtChallenging {

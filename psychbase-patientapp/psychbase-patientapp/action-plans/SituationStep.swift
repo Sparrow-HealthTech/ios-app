@@ -34,6 +34,8 @@ enum SituationEnum: CaseIterable {
 }
 
 struct SituationStep: View {
+    @Binding var formData: ActionPlanForm
+    
     let stepNumber: Int = 1
     let stepText: String = "What situation is this unhelpful thought related to?"
     let situations: [SituationEnum] = [.work, .study, .family, .friends, .relationships, .other]

@@ -48,6 +48,7 @@ struct Home: View {
         moduleSubtitle: "Having an unhelpful thought? Do this 1 min exercise to challenge it and help rewire your brain!",
         buttonLabel: "Start Exercise!"
     )
+    
     @State var assessmentTile  = ModuleData(
         type: moduleType.assessment,
         tileHeading: "Assigned Assessment",

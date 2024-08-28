@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MoodStep: View {
+    @Binding var formData: ActionPlanForm
+    
     let stepNumber: Int = 2
     let stepText: String = "How are you feeling right now?"
     

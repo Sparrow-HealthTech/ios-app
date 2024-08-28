@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TextFieldStep: View {
+    @Binding var formData: ActionPlanForm
     var stepNumber: Int
     var stepText: String
     var sampleAnswer: String
