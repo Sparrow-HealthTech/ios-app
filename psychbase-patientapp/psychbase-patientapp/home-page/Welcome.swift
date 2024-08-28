@@ -10,6 +10,8 @@ import SwiftUI
 @MainActor
 struct Welcome: View {
     @Binding var path: [appPages]
+    var isFirstTime: Bool
+    
     @State private var displayFlash = true
     
     var body: some View {
@@ -17,7 +19,11 @@ struct Welcome: View {
             WelcomeFlash()
                 .task(flashScreen)
         } else {
-            WelcomeAuth(path: $path)
+            if isFirstTime {
+                WelcomeOnboard(path: $path)
+            } else {
+                WelcomeAuth(path: $path)
+            }
         }
     }
     

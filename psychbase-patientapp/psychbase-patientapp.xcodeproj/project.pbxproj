@@ -44,6 +44,9 @@
 		D8ED4D672C7496EE003E920E /* WelcomeAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED4D662C7496EE003E920E /* WelcomeAuth.swift */; };
 		D8ED4D692C74A11C003E920E /* OTPText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED4D682C74A11C003E920E /* OTPText.swift */; };
 		D8ED4D6B2C74A1FF003E920E /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED4D6A2C74A1FF003E920E /* OTPTextField.swift */; };
+		D8ED4D6D2C74AB10003E920E /* WelcomeOnboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED4D6C2C74AB0F003E920E /* WelcomeOnboard.swift */; };
+		D8ED4D6F2C74B53D003E920E /* ConnectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED4D6E2C74B53D003E920E /* ConnectionScreen.swift */; };
+		D8ED4D712C74B5EC003E920E /* SetPINScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED4D702C74B5EC003E920E /* SetPINScreen.swift */; };
 		D8F541522C510B79000C3594 /* ModuleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F541512C510B79000C3594 /* ModuleHeader.swift */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +108,9 @@
 		D8ED4D662C7496EE003E920E /* WelcomeAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeAuth.swift; sourceTree = "<group>"; };
 		D8ED4D682C74A11C003E920E /* OTPText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPText.swift; sourceTree = "<group>"; };
 		D8ED4D6A2C74A1FF003E920E /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
+		D8ED4D6C2C74AB0F003E920E /* WelcomeOnboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeOnboard.swift; sourceTree = "<group>"; };
+		D8ED4D6E2C74B53D003E920E /* ConnectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionScreen.swift; sourceTree = "<group>"; };
+		D8ED4D702C74B5EC003E920E /* SetPINScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPINScreen.swift; sourceTree = "<group>"; };
 		D8F541512C510B79000C3594 /* ModuleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +175,9 @@
 				D8ED4D662C7496EE003E920E /* WelcomeAuth.swift */,
 				D8ED4D682C74A11C003E920E /* OTPText.swift */,
 				D8ED4D6A2C74A1FF003E920E /* OTPTextField.swift */,
+				D8ED4D6C2C74AB0F003E920E /* WelcomeOnboard.swift */,
+				D8ED4D6E2C74B53D003E920E /* ConnectionScreen.swift */,
+				D8ED4D702C74B5EC003E920E /* SetPINScreen.swift */,
 			);
 			path = "home-page";
 			sourceTree = "<group>";
@@ -398,18 +407,21 @@
 				D826FA5F2C660A0F0018A230 /* TextFieldStep.swift in Sources */,
 				D8C7A6002C6B5C6B00E265FB /* MoodGrid.swift in Sources */,
 				D8F541522C510B79000C3594 /* ModuleHeader.swift in Sources */,
+				D8ED4D712C74B5EC003E920E /* SetPINScreen.swift in Sources */,
 				D8A875772C6B8CB6007552FE /* ThoughtTypeOption.swift in Sources */,
 				D8712BF62C590D2700DF9116 /* Questionnaire.swift in Sources */,
 				D826FA612C660C050018A230 /* ModuleButton.swift in Sources */,
 				D8599A902C3AB4C900C9E017 /* Home.swift in Sources */,
 				D841F5DD2C6D8A230076D672 /* CompletionScreen.swift in Sources */,
 				D8712BFC2C59166B00DF9116 /* RadioButtonGroup.swift in Sources */,
+				D8ED4D6F2C74B53D003E920E /* ConnectionScreen.swift in Sources */,
 				D85E09A62C3A8FCB0075759E /* psychbase_patientappApp.swift in Sources */,
 				D8450D132C6C783F00F7399C /* OutcomeRatingStep.swift in Sources */,
 				D8712BF82C59114E00DF9116 /* DASSQuestion.swift in Sources */,
 				D8AFA5A52C6F4F5D0035E9E2 /* SupportServiceTile.swift in Sources */,
 				D826FA632C661EFE0018A230 /* ThoughtChallenging.swift in Sources */,
 				D81F5F152C4D0A600028FDA6 /* Assessment.swift in Sources */,
+				D8ED4D6D2C74AB10003E920E /* WelcomeOnboard.swift in Sources */,
 				D8AFA5A32C6F498F0035E9E2 /* SupportServices.swift in Sources */,
 				D8ED4D6B2C74A1FF003E920E /* OTPTextField.swift in Sources */,
 				D8599A8C2C3AA0EB00C9E017 /* HomeHeader.swift in Sources */,

@@ -16,8 +16,7 @@ struct WelcomeAuth: View {
     
     var body: some View {
         VStack {
-            VStack(alignment: .center, spacing: 20) {
-                Spacer()
+            VStack(alignment: .center, spacing: 100) {
                 Text("Hello John 👋\n\nWelcome back!")
                     .font(
                         Font.custom("Urbanist", size: 32)
@@ -26,19 +25,19 @@ struct WelcomeAuth: View {
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
                 
-                Spacer()
-                
-                Text("Enter PIN:")
-                  .font(
-                    Font.custom("Urbanist", size: 24)
-                      .weight(.semibold)
-                  )
-                  .foregroundColor(.white)
-                
-                OTPText(pinLength: 4,
-                        keyboardType: .numberPad,
-                        onComplete: authenticatePIN)
-                .padding(.horizontal, 50)
+                VStack {
+                    Text("Enter PIN:")
+                        .font(
+                            Font.custom("Urbanist", size: 24)
+                                .weight(.semibold)
+                        )
+                        .foregroundColor(.white)
+                    
+                    OTPText(pinLength: 4,
+                            keyboardType: .numberPad,
+                            onComplete: authenticatePIN)
+                    .padding(.horizontal, 50)
+                }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity,
                    alignment: .center)

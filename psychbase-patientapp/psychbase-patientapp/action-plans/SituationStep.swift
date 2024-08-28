@@ -13,7 +13,7 @@ struct Situation {
 }
 
 enum SituationEnum: CaseIterable {
-    case work, study, family, friends, other
+    case work, study, family, friends, relationships, other
     
     var situation: Situation {
         switch self {
@@ -25,6 +25,8 @@ enum SituationEnum: CaseIterable {
             return Situation(title: "Family", imgPath: "family-situation")
         case .friends:
             return Situation(title: "Friends", imgPath: "friends-situation")
+        case .relationships:
+            return Situation(title: "Relationships", imgPath: "relationships-situation")
         case .other:
             return Situation(title: "Other", imgPath: "other-situation")
         }
@@ -34,6 +36,7 @@ enum SituationEnum: CaseIterable {
 struct SituationStep: View {
     let stepNumber: Int = 1
     let stepText: String = "What situation is this unhelpful thought related to?"
+    let situations: [SituationEnum] = [.work, .study, .family, .friends, .relationships, .other]
     
     @State private var selection: SituationEnum?
     
@@ -64,22 +67,18 @@ struct SituationStep: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             
-            RadioButtonGroup(tags: SituationEnum.allCases,
-                             buttonSpacing: 8,
-                             stackPadding: 0,
-                             selection: $selection,
-                             button: {
-                isSelected, tag in
-                ZStack {
-                    SituationOption(imgPath: tag.situation.imgPath,
-                                    situation: tag.situation.title)
-                    if isSelected {
-                        SelectedSituationOption(imgPath: tag.situation.imgPath,
-                                                situation: tag.situation.title)
-                    }
+            HStack {
+                ForEach(0...2, id: \.self) {i in
+                    SituationOption(imgPath: situations[i].situation.imgPath,
+                                    situation: situations[i].situation.title)
                 }
             }
-            )
+            HStack {
+                ForEach(3...5, id: \.self) {i in
+                    SituationOption(imgPath: situations[i].situation.imgPath,
+                                    situation: situations[i].situation.title)
+                }
+            }
         }
         .frame(maxWidth: .infinity, alignment: .topLeading)
     }

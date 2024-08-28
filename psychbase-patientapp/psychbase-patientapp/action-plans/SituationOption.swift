@@ -11,18 +11,22 @@ struct SituationOption: View {
     var imgPath: String
     var situation: String
     
+    let greenColor = Color(red: 0.17, green: 0.63, blue: 0.28)
+    
     var body: some View {
-        VStack(alignment: .center, spacing: 8) {
-            Image(imgPath)
-                .resizable()
-                .frame(width: 32, height: 32)
-            Text(situation)
-                .font(
-                    Font.custom("Quicksand", size: 14)
-                        .weight(.semibold)
-                )
-                .multilineTextAlignment(.center)
-                .foregroundColor(Color(red: 0.17, green: 0.63, blue: 0.28))
+        HStack(alignment: .center, spacing: 8) {
+            VStack {
+                Image(imgPath)
+                    .resizable()
+                    .frame(width: 32, height: 32)
+                Text(situation)
+                    .font(
+                        Font.custom("Quicksand", size: 14)
+                            .weight(.semibold)
+                    )
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(greenColor)
+            }
         }
         .padding(8)
         .frame(maxWidth: .infinity, alignment: .center)
@@ -30,7 +34,7 @@ struct SituationOption: View {
         .overlay(
             RoundedRectangle(cornerRadius: 8)
                 .inset(by: 0.5)
-                .stroke(Color(red: 0.17, green: 0.63, blue: 0.28), lineWidth: 1)
+                .stroke(greenColor, lineWidth: 1)
         )
     }
 }

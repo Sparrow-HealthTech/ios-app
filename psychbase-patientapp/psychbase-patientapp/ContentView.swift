@@ -12,10 +12,11 @@ enum appPages {
     case actionPlan1
     case assessment1
     case actionPlan2
+    case supportServices
     case completionThoughtChallenging
     case completionThoughtRecording
     case completionAssessment
-    case supportServices
+    case completionOnboarding
 }
 
 struct ContentView: View {
@@ -23,7 +24,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack(path: $path) {
-            Welcome(path: $path)
+            Welcome(path: $path, isFirstTime: false)
             .navigationDestination(for: appPages.self){ appPage in
                 if appPage == .home {
                     VStack {
@@ -38,6 +39,8 @@ struct ContentView: View {
                     Assessment(path: $path)
                 } else if appPage == .actionPlan2 {
                     ThoughtChallenging(path: $path)
+                } else if appPage == .supportServices {
+                    SupportServices(path: $path)
                 } else if appPage == .completionThoughtChallenging {
                     CompletionScreen(path: $path,
                                      screenHeading: "Well Done!",
@@ -57,8 +60,12 @@ struct ContentView: View {
                                      screenDescription: "The answers you gave here will really help your psychologist understand the state of your mental health and guide your treatment accordindly.\n\nGood on you for taking time out of your day to help your psychologist! 🤩",
                                      screenImg: "completion-girl-road",
                                      screenButtonLabel: "Awesome!")
-                } else if appPage == .supportServices {
-                    SupportServices(path: $path)
+                } else if appPage == .completionOnboarding {
+                    CompletionScreen(path: $path,
+                                     screenHeading: "Thank You!",
+                                     screenDescription: "You’re all set up!\n\nIf you have any issues with this app please don’t hesitate to let your psychologist or the Sparrow HealthTech team know.\n\nWe hope you enjoy this app and it helps you in your mental health journey 🙂",
+                                     screenImg: "completion-girl-road",
+                                     screenButtonLabel: "Let's get started!")
                 }
             }
             .navigationBarBackButtonHidden(true)
