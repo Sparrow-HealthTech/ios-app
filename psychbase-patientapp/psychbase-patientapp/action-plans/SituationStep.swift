@@ -15,7 +15,7 @@ struct Situation {
 enum SituationEnum: CaseIterable {
     case work, study, family, friends, relationships, other
     
-    var situation: Situation {
+    var data: Situation {
         switch self {
         case .work:
             return Situation(title: "Work", imgPath: "work-situation")
@@ -38,7 +38,7 @@ struct SituationStep: View {
     let stepText: String = "What situation is this unhelpful thought related to?"
     let situations: [SituationEnum] = [.work, .study, .family, .friends, .relationships, .other]
     
-    @State private var selection: SituationEnum?
+    @State var selectedOptions: [SituationEnum] = []
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -69,14 +69,12 @@ struct SituationStep: View {
             
             HStack {
                 ForEach(0...2, id: \.self) {i in
-                    SituationOption(imgPath: situations[i].situation.imgPath,
-                                    situation: situations[i].situation.title)
+                    SituationOption(selectedOptions: $selectedOptions,          situation: situations[i])
                 }
             }
             HStack {
                 ForEach(3...5, id: \.self) {i in
-                    SituationOption(imgPath: situations[i].situation.imgPath,
-                                    situation: situations[i].situation.title)
+                    SituationOption(selectedOptions: $selectedOptions, situation: situations[i])
                 }
             }
         }
