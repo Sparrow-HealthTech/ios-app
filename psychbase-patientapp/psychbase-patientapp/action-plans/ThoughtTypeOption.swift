@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ThoughtTypeOption: View {
+    @Binding var formData: ActionPlanForm
     @Binding var selectedDistortions: [String]
     var typeImgPath: String
     var typeTitle: String
@@ -19,6 +20,7 @@ struct ThoughtTypeOption: View {
         } else {
             selectedDistortions.append(typeTitle)
         }
+        formData.selectedDistortions = selectedDistortions
     }
     
     var body: some View {

@@ -10,12 +10,18 @@ import SwiftUI
 struct ThoughtChallenging: View {
     @Binding var path: [appPages]
     @Binding var formData: ActionPlanForm
+    @State var isMandatoryFieldsEmpty: Bool = false
     
     let doctorImgPath = "female-doctor-1"
     let doctorSpeechText = "Good job completing the 1st step! Only a little more to go now...\n\nMost unhelpful thoughts are a result of your brain playing silly tricks on itself.\n\nUnderstanding this and reframing your thoughts to be more helpful is key to healing."
     
     func finishChallenging(){
-        path.append(.completionThoughtChallenging)
+        if formData.selectedDistortions.isEmpty || formData.outcomeRating.isEmpty {
+            isMandatoryFieldsEmpty = true
+        } else {
+            print(formData)
+            path.append(.completionThoughtChallenging)
+        }
     }
     
     var body: some View {
@@ -30,7 +36,7 @@ struct ThoughtChallenging: View {
                            speechColor: .orange)
                     VStack {
                         VStack(alignment: .leading, spacing: 30) {
-                            ThoughtTypeStep()
+                            ThoughtTypeStep(formData: $formData)
                                 .padding(.top, 20)
                             TextFieldStep(formData: $formData,
                                           stepNumber: 5,
@@ -68,6 +74,12 @@ struct ThoughtChallenging: View {
             }
         }
         .navigationBarBackButtonHidden(true)
+        .alert(isPresented: $isMandatoryFieldsEmpty){
+            Alert(title: Text("Incomplete Thought Challenging"),
+                  message: Text("Please select the unhepful thought type(s) and the exercise outcome rating (Q8) to complete this thought challenging exercise."),
+                  dismissButton: .default(Text("Got it!"))
+            )
+        }
     }
 }
 

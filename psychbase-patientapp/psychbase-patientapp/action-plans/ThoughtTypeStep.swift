@@ -15,6 +15,7 @@ struct ThoughtType: Identifiable {
 }
 
 struct ThoughtTypeStep: View {
+    @Binding var formData: ActionPlanForm
     @State var selectedDistortions: [String] = []
     
     let stepNumber: Int = 4
@@ -77,7 +78,8 @@ struct ThoughtTypeStep: View {
             
             VStack {
                 ForEach(thoughtTypes) {thoughtType in
-                    ThoughtTypeOption(selectedDistortions: $selectedDistortions,
+                    ThoughtTypeOption(formData: $formData,
+                                      selectedDistortions: $selectedDistortions,
                                       typeImgPath: thoughtType.typeImgPath,
                                       typeTitle:  thoughtType.typeTitle,
                                       typeDescription:  thoughtType.typeDescription)

@@ -15,6 +15,23 @@ struct TextFieldStep: View {
     
     @State private var answer: String = ""
     
+    func loadForm(answer: String){
+        if stepNumber == 3 {
+            formData.thoughtTxt = answer
+        }
+        else if stepNumber == 5 {
+            formData.evidenceForTxt = answer
+        }
+        else if stepNumber == 6 {
+            formData.evidenceAgainstTxt = answer
+        }
+        else if stepNumber == 7 {
+            formData.balancedThoughtTxt = answer
+        } else {
+            formData.balancedThoughtTxt = "Error in line 31 - TextFieldStep.swift"
+        }
+    }
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .center, spacing: 12) {
@@ -52,6 +69,9 @@ struct TextFieldStep: View {
                   .font(Font.custom("Quicksand", size: 16))
                   .frame(maxWidth: .infinity, alignment: .topLeading)
                   .lineLimit(3...20)
+                  .onChange(of: answer) {
+                      loadForm(answer: answer)
+                  }
             }
             .padding(20)
             .frame(maxWidth: .infinity, alignment: .center)

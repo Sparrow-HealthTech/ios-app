@@ -42,7 +42,7 @@ struct MoodStep: View {
             .padding(.bottom, 10)
             .frame(maxWidth: .infinity, alignment: .leading)
             
-            MoodGrid()
+            MoodGrid(formData: $formData)
         }
         .frame(maxWidth: .infinity, alignment: .topLeading)
     }

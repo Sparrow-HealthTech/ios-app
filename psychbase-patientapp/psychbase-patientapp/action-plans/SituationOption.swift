@@ -9,7 +9,9 @@ import SwiftUI
 
 struct SituationOption: View {
     @Binding var selectedOptions: [SituationEnum]
+    @Binding var formData: ActionPlanForm
     var situation: SituationEnum
+    
     @State var showOtherDialog: Bool = false
     @State var otherInput: String = ""
     
@@ -18,12 +20,17 @@ struct SituationOption: View {
     func situationClick(){
         if selectedOptions.contains(situation) {
             selectedOptions.removeAll{$0 == situation}
+            formData.selectedSituations = selectedOptions.map{$0.data.title}
         } else {
             selectedOptions.append(situation)
+            if situation == .other {
+                showOtherDialog = true
+            }
+            else {
+                formData.selectedSituations = selectedOptions.map{$0.data.title}
+            }
         }
-        if situation == .other {
-            showOtherDialog = true
-        }
+        print(formData.selectedSituations)
     }
     
     var body: some View {
@@ -33,7 +40,7 @@ struct SituationOption: View {
                     .alert("Other Situation", isPresented: $showOtherDialog) {
                         TextField("Math course", text: $otherInput)
                         Button("OK", action: {
-                            print("Text entered: \(otherInput)")
+                            formData.selectedSituations.append("Other - '\(otherInput)'")
                         })
                         Button("Cancel", role: .cancel) { }
                     }

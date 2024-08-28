@@ -95,6 +95,9 @@ struct OutcomeRatingStep: View {
                 }
             }
             )
+            .onChange(of: selection){
+                formData.outcomeRating = (selection?.description ?? "Error in line 99 - OutcomeRatingStep.swift")
+            }
         }
         .frame(maxWidth: .infinity, alignment: .topLeading)
     }

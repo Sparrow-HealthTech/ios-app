@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MoodGrid: View {
+    @Binding var formData: ActionPlanForm
     @State var selectedMoods: [String] = []
     
     let subgridHeight: CGFloat = 140
@@ -53,29 +54,65 @@ struct MoodGrid: View {
             GridRow {
                 // Red Tile
                 VStack(alignment: .leading, spacing: 0) {
-                    MoodSubgrid(selectedMoods: $selectedMoods,
-                                gradient: redGradient,
-                                emotions: ["Enraged", "Stressed", "Shocked"])
-                    MoodSubgrid(selectedMoods: $selectedMoods,
-                                gradient: redGradient,
-                                emotions: ["Fuming", "Angry", "Restless"])
-                    MoodSubgrid(selectedMoods: $selectedMoods,
-                                gradient: redGradient,
-                                emotions: ["Repulsed", "Worried", "Uneasy"])
+                    HStack(alignment: .top, spacing: 0) {
+                        ForEach(["Enraged", "Stressed", "Shocked"], id: \.self){mood in
+                            MoodTile(formData: $formData,
+                                     selectedMoods: $selectedMoods,
+                                     gradient: redGradient,
+                                     mood: mood)
+                        }
+                    }
+                    .padding(0)
+                    HStack(alignment: .top, spacing: 0) {
+                        ForEach(["Fuming", "Angry", "Restless"], id: \.self){mood in
+                            MoodTile(formData: $formData,
+                                     selectedMoods: $selectedMoods,
+                                     gradient: redGradient,
+                                     mood: mood)
+                        }
+                    }
+                    .padding(0)
+                    HStack(alignment: .top, spacing: 0) {
+                        ForEach(["Repulsed", "Worried", "Uneasy"], id: \.self){mood in
+                            MoodTile(formData: $formData,
+                                     selectedMoods: $selectedMoods,
+                                     gradient: redGradient,
+                                     mood: mood)
+                        }
+                    }
+                    .padding(0)
                 }
                 .frame(maxWidth: .infinity, idealHeight: subgridHeight)
                 
                 // Yellow Tile
                 VStack(alignment: .leading, spacing: 0) {
-                    MoodSubgrid(selectedMoods: $selectedMoods,
-                                gradient: yellowGradient,
-                                emotions: ["Surprised", "Festive", "Ecstatic"])
-                    MoodSubgrid(selectedMoods: $selectedMoods,
-                                gradient: yellowGradient,
-                                emotions: ["Energised", "Optimistic", "Excited"])
-                    MoodSubgrid(selectedMoods: $selectedMoods,
-                                gradient: yellowGradient,
-                                emotions: ["Pleasant", "Hopeful", "Blissful"])
+                    HStack(alignment: .top, spacing: 0) {
+                        ForEach(["Surprised", "Festive", "Ecstatic"], id: \.self){mood in
+                            MoodTile(formData: $formData,
+                                     selectedMoods: $selectedMoods,
+                                     gradient: yellowGradient,
+                                     mood: mood)
+                        }
+                    }
+                    .padding(0)
+                    HStack(alignment: .top, spacing: 0) {
+                        ForEach(["Energised", "Optimistic", "Excited"], id: \.self){mood in
+                            MoodTile(formData: $formData,
+                                     selectedMoods: $selectedMoods,
+                                     gradient: yellowGradient,
+                                     mood: mood)
+                        }
+                    }
+                    .padding(0)
+                    HStack(alignment: .top, spacing: 0) {
+                        ForEach(["Pleasant", "Hopeful", "Blissful"], id: \.self){mood in
+                            MoodTile(formData: $formData,
+                                     selectedMoods: $selectedMoods,
+                                     gradient: yellowGradient,
+                                     mood: mood)
+                        }
+                    }
+                    .padding(0)
                 }
                 .frame(maxWidth: .infinity, idealHeight: subgridHeight)
                 .background(
@@ -84,15 +121,33 @@ struct MoodGrid: View {
             GridRow {
                 // Blue tile
                 VStack(alignment: .leading, spacing: 0) {
-                    MoodSubgrid(selectedMoods: $selectedMoods,
-                                gradient: blueGradient,
-                                emotions: ["Disgusted", "Down", "Apathetic"])
-                    MoodSubgrid(selectedMoods: $selectedMoods,
-                                gradient: blueGradient,
-                                emotions: ["Miserable", "Lonely", "Tired"])
-                    MoodSubgrid(selectedMoods: $selectedMoods,
-                                gradient: blueGradient,
-                                emotions: ["Despair", "Desolate", "Drained"])
+                    HStack(alignment: .top, spacing: 0) {
+                        ForEach(["Disgusted", "Down", "Apathetic"], id: \.self){mood in
+                            MoodTile(formData: $formData,
+                                     selectedMoods: $selectedMoods,
+                                     gradient: blueGradient,
+                                     mood: mood)
+                        }
+                    }
+                    .padding(0)
+                    HStack(alignment: .top, spacing: 0) {
+                        ForEach(["Miserable", "Lonely", "Tired"], id: \.self){mood in
+                            MoodTile(formData: $formData,
+                                     selectedMoods: $selectedMoods,
+                                     gradient: blueGradient,
+                                     mood: mood)
+                        }
+                    }
+                    .padding(0)
+                    HStack(alignment: .top, spacing: 0) {
+                        ForEach(["Despair", "Desolate", "Drained"], id: \.self){mood in
+                            MoodTile(formData: $formData,
+                                     selectedMoods: $selectedMoods,
+                                     gradient: blueGradient,
+                                     mood: mood)
+                        }
+                    }
+                    .padding(0)
                 }
                 .frame(maxWidth: .infinity, idealHeight: subgridHeight)
                 .background(
@@ -100,15 +155,33 @@ struct MoodGrid: View {
                 
                 // Green Tile
                 VStack(alignment: .leading, spacing: 0) {
-                    MoodSubgrid(selectedMoods: $selectedMoods,
-                                gradient: greenGradient,
-                                emotions: ["At ease", "Content", "Fulfilled"])
-                    MoodSubgrid(selectedMoods: $selectedMoods,
-                                gradient: greenGradient,
-                                emotions: ["Relaxed", "Restful", "Balanced"])
-                    MoodSubgrid(selectedMoods: $selectedMoods,
-                                gradient: greenGradient,
-                                emotions: ["Sleepy", "Tranquil", "Serene"])
+                    HStack(alignment: .top, spacing: 0) {
+                        ForEach(["At ease", "Content", "Fulfilled"], id: \.self){mood in
+                            MoodTile(formData: $formData,
+                                     selectedMoods: $selectedMoods,
+                                     gradient: greenGradient,
+                                     mood: mood)
+                        }
+                    }
+                    .padding(0)
+                    HStack(alignment: .top, spacing: 0) {
+                        ForEach(["Relaxed", "Restful", "Balanced"], id: \.self){mood in
+                            MoodTile(formData: $formData,
+                                     selectedMoods: $selectedMoods,
+                                     gradient: greenGradient,
+                                     mood: mood)
+                        }
+                    }
+                    .padding(0)
+                    HStack(alignment: .top, spacing: 0) {
+                        ForEach(["Sleepy", "Tranquil", "Serene"], id: \.self){mood in
+                            MoodTile(formData: $formData,
+                                     selectedMoods: $selectedMoods,
+                                     gradient: greenGradient,
+                                     mood: mood)
+                        }
+                    }
+                    .padding(0)
                 }
                 .frame(maxWidth: .infinity, idealHeight: subgridHeight)
                 .background(

@@ -71,12 +71,12 @@ struct SituationStep: View {
             
             HStack {
                 ForEach(0...2, id: \.self) {i in
-                    SituationOption(selectedOptions: $selectedOptions,          situation: situations[i])
+                    SituationOption(selectedOptions: $selectedOptions, formData: $formData, situation: situations[i])
                 }
             }
             HStack {
                 ForEach(3...5, id: \.self) {i in
-                    SituationOption(selectedOptions: $selectedOptions, situation: situations[i])
+                    SituationOption(selectedOptions: $selectedOptions, formData: $formData, situation: situations[i])
                 }
             }
         }

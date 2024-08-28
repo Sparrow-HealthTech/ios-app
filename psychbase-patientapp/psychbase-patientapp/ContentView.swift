@@ -19,17 +19,6 @@ enum appPages {
     case completionOnboarding
 }
 
-struct ActionPlanForm {
-    var selectedSituations: [String] = []
-    var selectedMoods: [String] = []
-    var thoughtTxt: String = ""
-    var selectedDistortions: [String] = []
-    var evidenceForTxt: String = ""
-    var evidenceAgainstTxt: String = ""
-    var balancedThoughtTxt: String = ""
-    var outcomeRating: String = ""
-}
-
 struct ContentView: View {
     @State var path: [appPages] = []
     @State var actionPlanForm = ActionPlanForm()
@@ -82,48 +71,6 @@ struct ContentView: View {
             }
             .navigationBarBackButtonHidden(true)
         }
-    }
-}
-
-extension View {
-    /// Applies the given transform if the given condition evaluates to `true`.
-    /// - Parameters:
-    ///   - condition: The condition to evaluate.
-    ///   - transform: The transform to apply to the source `View`.
-    /// - Returns: Either the original `View` or the modified `View` if the condition is `true`.
-    @ViewBuilder func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
-        if condition {
-            transform(self)
-        } else {
-            self
-        }
-    }
-}
-
-extension String {
-
-    var length: Int {
-        return count
-    }
-
-    subscript (i: Int) -> String {
-        return self[i ..< i + 1]
-    }
-
-    func substring(fromIndex: Int) -> String {
-        return self[min(fromIndex, length) ..< length]
-    }
-
-    func substring(toIndex: Int) -> String {
-        return self[0 ..< max(0, toIndex)]
-    }
-
-    subscript (r: Range<Int>) -> String {
-        let range = Range(uncheckedBounds: (lower: max(0, min(length, r.lowerBound)),
-                                            upper: min(length, max(0, r.upperBound))))
-        let start = index(startIndex, offsetBy: range.lowerBound)
-        let end = index(start, offsetBy: range.upperBound - range.lowerBound)
-        return String(self[start ..< end])
     }
 }
 
