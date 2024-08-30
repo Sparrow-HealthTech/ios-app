@@ -16,10 +16,9 @@ struct WelcomeFlash: View {
                 .padding(.vertical)
             VStack(alignment: .center, spacing: 10) {
                 Text("Welcome to")
-                    .font(Font.custom("Urbanist", size: 30))
+                    .font(Font.custom("Urbanist-Regular", size: 30))
                 Text("PsychBase")
-                    .font(Font.custom("Urbanist", size: 50))
-                    .fontWeight(.bold)
+                    .font(Font.custom("Urbanist-Bold", size: 50))
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             

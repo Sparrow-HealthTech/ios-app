@@ -32,6 +32,8 @@
 		D8712BF82C59114E00DF9116 /* DASSQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8712BF72C59114E00DF9116 /* DASSQuestion.swift */; };
 		D8712BFA2C5914F600DF9116 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8712BF92C5914F600DF9116 /* RadioButton.swift */; };
 		D8712BFC2C59166B00DF9116 /* RadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8712BFB2C59166B00DF9116 /* RadioButtonGroup.swift */; };
+		D89700A12C81768A00189D34 /* Urbanist-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D897009F2C81768A00189D34 /* Urbanist-Bold.ttf */; };
+		D89700A22C81768A00189D34 /* Urbanist-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89700A02C81768A00189D34 /* Urbanist-Regular.ttf */; };
 		D8A875752C6B8825007552FE /* ThoughtTypeStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A875742C6B8825007552FE /* ThoughtTypeStep.swift */; };
 		D8A875772C6B8CB6007552FE /* ThoughtTypeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A875762C6B8CB6007552FE /* ThoughtTypeOption.swift */; };
 		D8AFA5A32C6F498F0035E9E2 /* SupportServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AFA5A22C6F498E0035E9E2 /* SupportServices.swift */; };
@@ -96,6 +98,9 @@
 		D8712BF72C59114E00DF9116 /* DASSQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DASSQuestion.swift; sourceTree = "<group>"; };
 		D8712BF92C5914F600DF9116 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		D8712BFB2C59166B00DF9116 /* RadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroup.swift; sourceTree = "<group>"; };
+		D897009F2C81768A00189D34 /* Urbanist-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Bold.ttf"; sourceTree = "<group>"; };
+		D89700A02C81768A00189D34 /* Urbanist-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Regular.ttf"; sourceTree = "<group>"; };
+		D89700A32C8176E100189D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D8A875742C6B8825007552FE /* ThoughtTypeStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtTypeStep.swift; sourceTree = "<group>"; };
 		D8A875762C6B8CB6007552FE /* ThoughtTypeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtTypeOption.swift; sourceTree = "<group>"; };
 		D8AFA5A22C6F498E0035E9E2 /* SupportServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportServices.swift; sourceTree = "<group>"; };
@@ -205,6 +210,8 @@
 		D85E09A42C3A8FCB0075759E /* psychbase-patientapp */ = {
 			isa = PBXGroup;
 			children = (
+				D89700A32C8176E100189D34 /* Info.plist */,
+				D897009E2C81760800189D34 /* fonts */,
 				D81F5F162C4D0F820028FDA6 /* components */,
 				D81F5F132C4D0A3F0028FDA6 /* assessments */,
 				D8E65B792C3FB36100942DCE /* action-plans */,
@@ -241,6 +248,15 @@
 				D85E09C22C3A8FCD0075759E /* psychbase_patientappUITestsLaunchTests.swift */,
 			);
 			path = "psychbase-patientappUITests";
+			sourceTree = "<group>";
+		};
+		D897009E2C81760800189D34 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D897009F2C81768A00189D34 /* Urbanist-Bold.ttf */,
+				D89700A02C81768A00189D34 /* Urbanist-Regular.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		D8E65B792C3FB36100942DCE /* action-plans */ = {
@@ -365,8 +381,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89700A12C81768A00189D34 /* Urbanist-Bold.ttf in Resources */,
 				D85E09AD2C3A8FCD0075759E /* Preview Assets.xcassets in Resources */,
 				D85E09AA2C3A8FCD0075759E /* Assets.xcassets in Resources */,
+				D89700A22C81768A00189D34 /* Urbanist-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +611,7 @@
 				DEVELOPMENT_TEAM = M33RBDC882;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "psychbase-patientapp/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = PsychBase;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -628,6 +647,7 @@
 				DEVELOPMENT_TEAM = M33RBDC882;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "psychbase-patientapp/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = PsychBase;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
