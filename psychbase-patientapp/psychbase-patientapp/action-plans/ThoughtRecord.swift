@@ -24,7 +24,11 @@ struct ThoughtRecord: View {
     }
     
     func progressToThoughtChallenging() {
-        path.append(.actionPlan2)
+        if formData.selectedSituations.isEmpty || formData.selectedMoods.isEmpty {
+            isMandatoryFieldsEmpty = true
+        } else {
+            path.append(.actionPlan2)
+        }
     }
     
     var body: some View {

@@ -6,6 +6,12 @@
 	<array>
 		<string>Urbanist-Regular.ttf</string>
 		<string>Urbanist-Bold.ttf</string>
+		<string>Urbanist-SemiBold.ttf</string>
+		<string>Quicksand-Bold.ttf</string>
+		<string>Quicksand-Light.ttf</string>
+		<string>Quicksand-Medium.ttf</string>
+		<string>Quicksand-Regular.ttf</string>
+		<string>Quicksand-SemiBold.ttf</string>
 	</array>
 </dict>
 </plist>

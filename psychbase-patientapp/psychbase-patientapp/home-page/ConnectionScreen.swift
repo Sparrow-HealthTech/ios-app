@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ConnectionScreen: View {
     @Binding var currentPage: onboardingPages
-    
     @State private var onboardingKey = ""
     
     func submitOnboardingKey(){
@@ -36,7 +35,7 @@ struct ConnectionScreen: View {
                 
                 Group {
                     TextField("", text: $onboardingKey)
-                        .font(Font.custom("Quicksand", size: 16))
+                        .font(Font.custom("Quicksand-Regular", size: 16))
                         .foregroundColor(.black)
                         .lineLimit(1)
                         .padding(5)
@@ -51,5 +50,12 @@ struct ConnectionScreen: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity,
                alignment: .center)
+    }
+}
+
+struct ConnectionScreenPreview: PreviewProvider {
+    @State static var currentPage = onboardingPages.connectionPage
+    static var previews: some View {
+        ConnectionScreen(currentPage: $currentPage)
     }
 }

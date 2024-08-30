@@ -25,7 +25,7 @@ struct ModuleTile: View {
             // Heading
             Text(tileData.tileHeading)
                 .font(
-                    Font.custom("Quicksand", size: 20)
+                    Font.custom("Quicksand", size: 22)
                         .weight(.semibold)
                 )
                 .multilineTextAlignment(.center)
@@ -34,7 +34,7 @@ struct ModuleTile: View {
             // Description
             Text(tileData.tileSubtitle)
                 .font(
-                    Font.custom("Quicksand", size: 12)
+                    Font.custom("Quicksand", size: 14)
                         .weight(.medium)
                 )
                 .foregroundColor(.black.opacity(0.8))
@@ -64,7 +64,7 @@ struct ModuleTile: View {
             // Exercise Description
             Text(tileData.moduleSubtitle)
                 .font(
-                    Font.custom("Quicksand", size: 12)
+                    Font.custom("Quicksand", size: 14)
                         .weight(.medium)
                 )
                 .foregroundColor(.black.opacity(0.8))

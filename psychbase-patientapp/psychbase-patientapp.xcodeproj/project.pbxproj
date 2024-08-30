@@ -34,6 +34,12 @@
 		D8712BFC2C59166B00DF9116 /* RadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8712BFB2C59166B00DF9116 /* RadioButtonGroup.swift */; };
 		D89700A12C81768A00189D34 /* Urbanist-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D897009F2C81768A00189D34 /* Urbanist-Bold.ttf */; };
 		D89700A22C81768A00189D34 /* Urbanist-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89700A02C81768A00189D34 /* Urbanist-Regular.ttf */; };
+		D89700A92C81782500189D34 /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89700A42C81782500189D34 /* Quicksand-SemiBold.ttf */; };
+		D89700AA2C81782500189D34 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89700A52C81782500189D34 /* Quicksand-Medium.ttf */; };
+		D89700AB2C81782500189D34 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89700A62C81782500189D34 /* Quicksand-Bold.ttf */; };
+		D89700AC2C81782500189D34 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89700A72C81782500189D34 /* Quicksand-Regular.ttf */; };
+		D89700AD2C81782500189D34 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89700A82C81782500189D34 /* Quicksand-Light.ttf */; };
+		D89700AF2C8178F600189D34 /* Urbanist-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D89700AE2C8178F600189D34 /* Urbanist-SemiBold.ttf */; };
 		D8A875752C6B8825007552FE /* ThoughtTypeStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A875742C6B8825007552FE /* ThoughtTypeStep.swift */; };
 		D8A875772C6B8CB6007552FE /* ThoughtTypeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A875762C6B8CB6007552FE /* ThoughtTypeOption.swift */; };
 		D8AFA5A32C6F498F0035E9E2 /* SupportServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AFA5A22C6F498E0035E9E2 /* SupportServices.swift */; };
@@ -101,6 +107,12 @@
 		D897009F2C81768A00189D34 /* Urbanist-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Bold.ttf"; sourceTree = "<group>"; };
 		D89700A02C81768A00189D34 /* Urbanist-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Regular.ttf"; sourceTree = "<group>"; };
 		D89700A32C8176E100189D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D89700A42C81782500189D34 /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
+		D89700A52C81782500189D34 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		D89700A62C81782500189D34 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		D89700A72C81782500189D34 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		D89700A82C81782500189D34 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		D89700AE2C8178F600189D34 /* Urbanist-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-SemiBold.ttf"; sourceTree = "<group>"; };
 		D8A875742C6B8825007552FE /* ThoughtTypeStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtTypeStep.swift; sourceTree = "<group>"; };
 		D8A875762C6B8CB6007552FE /* ThoughtTypeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtTypeOption.swift; sourceTree = "<group>"; };
 		D8AFA5A22C6F498E0035E9E2 /* SupportServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportServices.swift; sourceTree = "<group>"; };
@@ -253,8 +265,14 @@
 		D897009E2C81760800189D34 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				D89700A62C81782500189D34 /* Quicksand-Bold.ttf */,
+				D89700A82C81782500189D34 /* Quicksand-Light.ttf */,
+				D89700A52C81782500189D34 /* Quicksand-Medium.ttf */,
+				D89700A72C81782500189D34 /* Quicksand-Regular.ttf */,
+				D89700A42C81782500189D34 /* Quicksand-SemiBold.ttf */,
 				D897009F2C81768A00189D34 /* Urbanist-Bold.ttf */,
 				D89700A02C81768A00189D34 /* Urbanist-Regular.ttf */,
+				D89700AE2C8178F600189D34 /* Urbanist-SemiBold.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -381,10 +399,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89700AB2C81782500189D34 /* Quicksand-Bold.ttf in Resources */,
 				D89700A12C81768A00189D34 /* Urbanist-Bold.ttf in Resources */,
+				D89700A92C81782500189D34 /* Quicksand-SemiBold.ttf in Resources */,
+				D89700AD2C81782500189D34 /* Quicksand-Light.ttf in Resources */,
+				D89700AC2C81782500189D34 /* Quicksand-Regular.ttf in Resources */,
+				D89700AF2C8178F600189D34 /* Urbanist-SemiBold.ttf in Resources */,
 				D85E09AD2C3A8FCD0075759E /* Preview Assets.xcassets in Resources */,
 				D85E09AA2C3A8FCD0075759E /* Assets.xcassets in Resources */,
 				D89700A22C81768A00189D34 /* Urbanist-Regular.ttf in Resources */,
+				D89700AA2C81782500189D34 /* Quicksand-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
