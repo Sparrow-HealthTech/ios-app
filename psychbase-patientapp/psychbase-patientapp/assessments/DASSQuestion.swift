@@ -19,7 +19,7 @@ enum DASSOption: CaseIterable, CustomStringConvertible {
         case .often:
             return "Often"
         case .almostAlways:
-            return "Almost Always"
+            return "Almost\nAlways"
         }
     }
 }
@@ -67,7 +67,7 @@ struct DASSQuestion: View {
                         .clipped()
                 )
             RadioButtonGroup(tags: DASSOption.allCases,
-                             buttonSpacing: 40,
+                             buttonSpacing: 30,
                              stackPadding: 5,
                              selection: $selection,
                              button: {

@@ -71,7 +71,7 @@ struct OutcomeRatingStep: View {
                     VStack {
                         Image("radio-button")
                             .resizable()
-                            .frame(width: 20, height: 20)
+                            .frame(width: 30, height: 30)
                         Text(tag.description)
                             .font(
                                 Font.custom("Quicksand", size: 12)
@@ -83,7 +83,7 @@ struct OutcomeRatingStep: View {
                         VStack {
                             Image("selected-radio-button")
                                 .resizable()
-                                .frame(width: 20, height: 20)
+                                .frame(width: 30, height: 30)
                             Text(tag.description)
                                 .font(
                                     Font.custom("Quicksand", size: 12)
